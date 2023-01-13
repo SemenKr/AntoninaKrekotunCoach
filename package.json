@@ -19,6 +19,7 @@
 		"bem": "fls-bemtree-from-html"
 	},
 	"devDependencies": {
+		"@prettier/plugin-pug": "^2.3.0",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "latest",
@@ -52,6 +53,7 @@
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",
 		"nouislider": "latest",
+		"prettier": "^2.8.2",
 		"pug": "latest",
 		"pug-loader": "latest",
 		"sass": "latest",
