@@ -52,12 +52,6 @@
 		align-items: center;
 		position: relative;
 	}
-	// .header__logo
-	&__logo {
-	}
-	// .header__menu
-	&__menu {
-	}
 }
 
 //========================================================================================================================================================
@@ -96,9 +90,6 @@
 		100% {
 			clip-path: circle(0% at top right);
 		}
-	}
-	// .menu__icon
-	&__icon {
 	}
 	// .menu__body
 	&__body {
@@ -155,9 +146,7 @@
 			@include adaptiveValue("gap", 50, 40);
 		}
 	}
-	// .menu__item
-	&__item {
-	}
+
 	// .menu__link
 	&__link {
 		font-weight: 300;
@@ -245,9 +234,6 @@
 		.menu-open & {
 			span {
 				width: 0;
-			}
-			&::before,
-			&::after {
 			}
 			&::before {
 				top: calc(50% - rem(1));
