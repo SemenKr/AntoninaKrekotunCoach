@@ -73,6 +73,7 @@
       "webpack-stream": "latest"
    },
    "dependencies": {
+      "pug-cli": "^1.0.0-alpha6",
       "simplebar": "latest"
    }
 }
