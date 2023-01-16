@@ -1,18 +1,223 @@
 //====================================================================================================
 .header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 3;
+
+	&::before {
+		content: "";
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(162, 162, 162, 0.7);
+		z-index: -1;
+		display: none;
+
+		@media (max-width: $mobileSmall) {
+			top: rem(102);
+		}
+	}
+
+	.menu-open & {
+		&::before {
+			display: block;
+		}
+
+		@media (min-width: $tablet) {
+			&::before {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		padding-top: rem(30);
+	}
+
+	@media (max-width: $tablet) {
+		padding-top: rem(41);
+	}
+
+	@media (min-width: $tablet) {
+		padding-top: rem(60);
+	}
+
+	// .header__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+	}
+	// .header__logo
+	&__logo {
+	}
+	// .header__menu
+	&__menu {
+	}
 }
+
+//========================================================================================================================================================
+
+.logo {
+	svg {
+		width: rem(175);
+		height: rem(55);
+	}
+	@media (max-width: $tablet) {
+		svg {
+			width: rem(146);
+			height: rem(52);
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.menu {
+	background-color: $mainColorBg;
+	z-index: 3;
+
+	@keyframes clipPathCircleOpen {
+		0% {
+			clip-path: circle(0% at top right);
+		}
+		100% {
+			clip-path: circle(250% at top right);
+		}
+	}
+	@keyframes clipPathCircleClose {
+		0% {
+			clip-path: circle(250% at top right);
+		}
+		100% {
+			clip-path: circle(0% at top right);
+		}
+	}
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+		@media (max-width: $tablet) {
+			position: absolute;
+			top: 100%;
+			right: 0%;
+			transition: clip-path ease-in-out 700ms;
+			background-color: $mainColorBg;
+			z-index: 4;
+
+			&[data-state="opened"] {
+				animation: clipPathCircleOpen 750ms ease-in-out forwards;
+				display: block;
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					position: absolute;
+					top: -50%;
+					height: 100%;
+					background-color: inherit;
+					z-index: -1;
+
+					@media (max-width: $mobileSmall) {
+						display: none;
+					}
+				}
+			}
+
+			&[data-state="closing"] {
+				animation: clipPathCircleClose 750ms ease-in-out forwards;
+			}
+
+			&[data-state="closed"] {
+				display: none;
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+
+		@media (min-width: $tablet) {
+			flex-direction: row;
+			@include adaptiveValue("gap", 50, 40);
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		font-weight: 300;
+		display: flex;
+		border-radius: rem(5);
+		transition: opacity 0.3s ease 0s;
+
+		@media (max-width: $tablet) {
+			font-size: rem(26);
+			line-height: math.div(34, 26);
+			text-align: center;
+			padding: rem(6) rem(69);
+		}
+
+		@media (min-width: $tablet) {
+			font-size: rem(18);
+			line-height: math.div(22, 18);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.6;
+			}
+			&:active {
+				opacity: 0.2;
+			}
+			&:focus {
+				outline: 2px solid $mainColorText;
+				outline-offset: rem(-2);
+			}
+		}
+	}
+}
+
 //====================================================================================================
 
 //Burger
 
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(20);
 		height: rem(14);
+		padding: rem(3);
+		border-radius: rem(2);
+		outline: none;
 		z-index: 5;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.6;
+			}
+			&:active {
+				opacity: 0.2;
+			}
+			&:focus {
+				opacity: 0.6;
+			}
+		}
 		@media (any-hover: none) {
 			cursor: default;
 		}
