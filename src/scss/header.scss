@@ -1,16 +1,17 @@
 //====================================================================================================
-
+.header {
+}
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
-		height: rem(18);
+		width: rem(20);
+		height: rem(14);
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
@@ -24,7 +25,8 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			border-radius: rem(5);
+			background-color: $accentColor;
 		}
 		&::before {
 			top: 0;
@@ -53,4 +55,3 @@
 		}
 	}
 }
-*/
