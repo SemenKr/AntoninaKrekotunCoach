@@ -1,9 +1,21 @@
 //====================================================================================================
 .header {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	z-index: 3;
+	background-color: $mainColorBg;
+	padding-bottom: rem(20);
+
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+	}
+
+	&._header-show {
+		transition: top 0.3s ease 0s;
+		top: 0;
+	}
 
 	&::before {
 		content: "";
@@ -187,6 +199,7 @@
 
 .icon-menu {
 	display: none;
+	background-color: transparent;
 	@media (max-width: $tablet) {
 		display: block;
 		position: relative;

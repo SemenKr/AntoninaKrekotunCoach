@@ -1,3 +1,78 @@
 .intro {
 	padding-top: rem(162);
+	padding-bottom: rem(80);
+	// .intro__container
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@media (min-width: $mobile) {
+			grid-template-columns: 1fr auto;
+			@include adaptiveValue("column-gap", 60, 20);
+			@include adaptiveValue("margin-bottom", 70, 60);
+		}
+
+		@media (min-width: $tablet) {
+			@include adaptiveValue("margin-bottom", 90, 70);
+		}
+	}
+
+	// .intro__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .intro__title
+	&__title {
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: math.div(24, 16);
+		text-transform: uppercase;
+		margin-bottom: rem(5);
+	}
+	// .intro__tagline
+	&__tagline {
+		font-family: $fontFamilyTitle;
+		font-weight: 600;
+		font-size: rem(40);
+		line-height: math.div(48, 40);
+		margin-bottom: rem(13);
+	}
+	// .intro__description
+	&__description {
+		font-weight: 300;
+		line-height: math.div(20, 14);
+		margin-bottom: rem(36);
+
+		br {
+			display: none;
+
+			@media (min-width: $mobile) {
+				display: block;
+			}
+		}
+	}
+	// .intro__button
+	&__button {
+		margin-bottom: rem(36);
+	}
+	// .intro__image-ibg
+	&__image-ibg {
+		@media (max-width: $mobile) {
+			padding-bottom: percent(319, 280);
+			@include adaptiveValue("min-width", 355, 280);
+		}
+
+		@media (min-width: $mobile) {
+			padding-bottom: percent(404, 354.14);
+			grid-column: 2/3;
+			@include adaptiveValue("min-width", 536, 355);
+		}
+
+		@media (min-width: $tablet) {
+			padding-bottom: percent(628, 550);
+			@include adaptiveValue("min-width", 715, 536);
+		}
+	}
 }
