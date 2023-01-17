@@ -32,4 +32,4 @@ function closeMenu()
 		{ once: true }
 	);
 }
-console.log(menuToggle)
+
