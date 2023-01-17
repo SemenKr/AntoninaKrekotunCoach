@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	z-index: 3;
-	background-color: $mainColorBg;
+	background: linear-gradient(0deg, rgba(2, 0, 36, 0) 3%, rgba(251, 248, 247, 1) 23%, rgba(251, 248, 247, 1) 42%);
 	padding-bottom: rem(20);
 
 	&._header-scroll {

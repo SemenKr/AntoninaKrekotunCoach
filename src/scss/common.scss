@@ -16,10 +16,14 @@
 	width: 100%;
 	height: rem(96);
 	border: rem(3) solid #ffffff;
-	animation: marquee 10s linear infinite;
+	animation: marquee 35s linear infinite;
 
 	@media (max-width: $mobile) {
 		display: none;
+	}
+
+	@media (min-width: $tablet) {
+		@include adaptiveValue("height", 150, 90);
 	}
 
 	@media (any-hover: hover) {
