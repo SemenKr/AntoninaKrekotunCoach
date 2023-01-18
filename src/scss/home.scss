@@ -210,3 +210,70 @@
 }
 
 //====================================================================================================
+.training {
+	// .training__container
+	&__container {
+	}
+	// .training__title
+	&__title {
+	}
+	// .training__swiper
+	&__swiper {
+	}
+	// .training__slider
+	&__slider {
+	}
+	// .training__wrapper
+	&__wrapper {
+	}
+	// .training__slide
+	&__slide {
+	}
+	// .training__slider-thumbs
+	&__slider-thumbs {
+	}
+	// .training__content
+	&__content {
+	}
+	// .training__subtitle
+	&__subtitle {
+	}
+	// .training__description
+	&__description {
+	}
+	// .training__list-title
+	&__list-title {
+	}
+	// .training__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(5);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(25);
+		}
+		@media (min-width: $mobile) {
+			gap: rem(8);
+		}
+	}
+	// .training__item
+	&__item {
+		padding-left: rem(13);
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		gap: rem(10);
+
+		&::before {
+			content: "";
+			border-radius: 50%;
+			background-color: $mainColorText;
+			margin-top: rem(10);
+			width: rem(3);
+			height: rem(3);
+		}
+	}
+	// .training__advice
+	&__advice {
+	}
+}
