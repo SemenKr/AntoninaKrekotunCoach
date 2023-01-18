@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Тоня Крекотун"
 })
 
 <body>
@@ -26,6 +26,40 @@
 					</div>
 				</div>
 				<div class="marquee"></div>
+			</section>
+			<section class="about">
+				<div class="about__container">
+					<h2 class="about__title title">O тренере</h2>
+					<div class="about__image-ibg">
+						<picture>
+							<source srcset="@img/intro/about@1x.webp 1x, @img/about/about@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="@img/about/about-tablet@1x.webp 1x, @img/about/about-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<source srcset="@img/about/about-mobile@1x.webp 1x, @img/about/about-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+							<img src="@img/about/about-mobile@1x.jpg" alt="Фотографии тренера">
+						</picture>
+					</div>
+					<div class="about__content-wrapper">
+						<p class="about__description description">Привет! Меня зовут Тоня. Я&nbsp;тренер
+							по&nbsp;умному фитнесу и&nbsp;специалистпо движению.
+							После вторых родов меня активно затянул мир фитнеса и&nbsp;3д&nbsp;движений.
+							Я&nbsp;прошла обучение на&nbsp;фитнес тренера
+							и&nbsp;стала читать специализированную литературу.
+						</p>
+						<h3 class="about__list-title title_list">Со&nbsp;мной&nbsp;ты:</h3>
+						<ul class="about__list description">
+							<li class="about__item">лучше узнаешь свое тело и&nbsp;его возможности</li>
+							<li class="about__item">вернёшь телу подвижность и&nbsp;лёгкость движения</li>
+							<li class="about__item">улучшишь осанку</li>
+							<li class="about__item">избавишься от&nbsp;отеков и&nbsp;дискомфорта</li>
+							<li class="about__item">избавишься от&nbsp;проблемных зон</li>
+							<li class="about__item">укрепишь мышцы кора и&nbsp;ягодиц</li>
+						</ul>
+					</div>
+					<p class="about__advice description">Не&nbsp;гонись за&nbsp;чужим идеальным телом, а&nbsp;создавай своё!
+						В&nbsp;моей работе на&nbsp;первом месте здоровье клиентов без диет
+						и&nbsp;изнуряющих тренировок
+					</p>
+				</div>
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})

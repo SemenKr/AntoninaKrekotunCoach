@@ -41,3 +41,54 @@
 		background-position: 150% 0px;
 	}
 }
+
+//========================================================================================================================================================
+.title {
+	font-family: $fontFamilyTitle;
+	font-weight: 600;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("font-size", 40, 30);
+		line-height: 1.27;
+	}
+	@media (max-width: $tablet) {
+		@include adaptiveValue("font-size", 50, 40);
+		line-height: 1.2;
+	}
+	@media (min-width: $tablet) {
+		@include adaptiveValue("font-size", 60, 50);
+		line-height: 1.16;
+	}
+	// .title_list
+	&_list {
+		font-family: $fontFamily;
+		font-weight: 700;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 16, 14);
+			line-height: 1.43;
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 18, 16);
+			line-height: 1.5;
+		}
+		@media (min-width: $tablet) {
+			@include adaptiveValue("font-size", 20, 18);
+			line-height: 1.44;
+		}
+	}
+}
+
+.description {
+	font-weight: 300;
+	@media (max-width: $mobile) {
+		font-size: rem(14);
+		line-height: 1.57;
+	}
+	@media (max-width: $tablet) {
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: 1.5;
+	}
+	@media (min-width: $tablet) {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 1.44;
+	}
+}
