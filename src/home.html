@@ -70,51 +70,57 @@
 							<!-- Двигающееся часть слайдера -->
 							<div class="training__wrapper swiper-wrapper">
 								<!-- Слайд -->
-								<div class="training__slide swiper-slide">
+								<div class="training__slide-ibg swiper-slide">
 									<img src="@img/training/training_1@2x.jpg" alt="">
 								</div>
-								<div class="training__slide swiper-slide">
+								<div class="training__slide-ibg swiper-slide">
 									<img src="@img/training/training_2@2x.jpg" alt="">
 								</div>
-								<div class="training__slide swiper-slide">
+								<div class="training__slide-ibg swiper-slide">
 									<img src="@img/training/training_3@2x.jpg" alt="">
 								</div>
 							</div>
-							<!-- Если нужна пагинация -->
-							<div class="swiper-pagination"></div>
-							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="swiper-button-prev"></button>
-							<button type="button" class="swiper-button-next"></button>
-							<!-- Если нужен скролбар -->
-							<div class="swiper-scrollbar"></div>
+
+
 						</div>
-						<div class="training__slider-thumbs swiper">
-							<div class="training__wrapper swiper-wrapper">
-								<div class="training__slide swiper-slide">
-									<img src="@img/training/training_1@2x.jpg" alt="coach">
-								</div>
-								<div class="training__slide swiper-slide">
-									<img src="@img/training/training_2@2x.jpg" alt="coach">
-								</div>
-								<div class="training__slide swiper-slide">
-									<img src="@img/training/training_3@2x.jpg" alt="coach">
-								</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-paginations"></div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="swiper-button-next"></button>
+					</div>
+					<div class="training__slider-thumbs swiper">
+						<div class="training__wrapper swiper-wrapper">
+							<div class="training__slide-thumbs-ibg swiper-slide">
+								<img src="@img/training/training_1@2x.jpg" alt="coach">
+							</div>
+							<div class="training__slide-thumbs-ibg swiper-slide">
+								<img src="@img/training/training_2@2x.jpg" alt="coach">
+							</div>
+							<div class="training__slide-thumbs-ibg swiper-slide">
+								<img src="@img/training/training_3@2x.jpg" alt="coach">
 							</div>
 						</div>
 					</div>
-					<div class="training__content">
-						<h3 class="training__subtitle">Осанка</h3>
+					<div data-showmore class="training__content">
+						<h3 class="training__subtitle title title_sub">Осанка</h3>
 						<p class="training__description description">Истинная осанка&nbsp;&mdash; это бессознательное положение тела в&nbsp;пространстве. стоя, сидя или в&nbsp;движении. Она не&nbsp;должна постоянно корректироваться сознательно. как мы&nbsp;не&nbsp;думаем про дыхание, также мы&nbsp;не&nbsp;должны пытаться насильно держать спину ровной</p>
+						<h4 class="training__list-title title_list">Существует 4&nbsp;типа осанки:</h4>
+						<div data-showmore-content="140" class="training__list-wrapper">
+							<ul class="training__list description">
+								<li class="training__item">нормальная осанка (естественные изгибы)</li>
+								<li class="training__item">гиперкифоз (круглая спина)</li>
+								<li class="training__item">плоская спина (уплощены естественные изгибы)</li>
+								<li class="training__item">перепрогиб в грудо-поясничном переходе (вогнуто-плоска спина)</li>
+								<li class="training__item">кругло-вогнутая (передний наклон таза+компенсаторный кифоз)</li>
+							</ul>
+							<p class="training__advice description">При каждом типе осанки свои нюансы работы, но&nbsp;есть вещи, которые полезны всем. Это работа со&nbsp;зрением, вестибулярным аппаратом и&nbsp;мозжечком. Именно мозжечок отвечает за&nbsp;осанку.
+							</p>
+						</div>
+						<button hidden data-showmore-button="1000" type="button" class="block__more">
+							<span>Раскрыть полностью</span>
+							<span>Скрыть</span>
+						</button>
 					</div>
-					<h4 class="training__list-title title_list">Существует 4&nbsp;типа осанки:</h4>
-					<ul class="training__list description">
-						<li class="training__item">нормальная осанка (естественные изгибы)</li>
-						<li class="training__item">гиперкифоз (круглая спина)</li>
-						<li class="training__item">плоская спина (уплощены естественные изгибы)</li>
-						<li class="training__item">перепрогиб в грудо-поясничном переходе (вогнуто-плоска спина)</li>
-						<li class="training__item">кругло-вогнутая (передний наклон таза+компенсаторный кифоз)</li>
-					</ul>
-					<p class="training__advice description">При каждом типе осанки свои нюансы работы, но&nbsp;есть вещи, которые полезны всем. Это работа со&nbsp;зрением, вестибулярным аппаратом и&nbsp;мозжечком. Именно мозжечок отвечает за&nbsp;осанку.</p>
 				</div>
 			</section>
 		</main>

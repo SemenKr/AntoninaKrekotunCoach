@@ -58,6 +58,25 @@
 		@include adaptiveValue("font-size", 60, 50);
 		line-height: 1.16;
 	}
+
+	// .title_sub
+
+	&_sub {
+		font-family: $fontFamilyTitle;
+		font-weight: 600;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 26, 18);
+			line-height: 1.43;
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 38, 26);
+			line-height: 1.5;
+		}
+		@media (min-width: $tablet) {
+			@include adaptiveValue("font-size", 38, 36);
+			line-height: 1.44;
+		}
+	}
 	// .title_list
 	&_list {
 		font-family: $fontFamily;
@@ -90,5 +109,31 @@
 	@media (min-width: $tablet) {
 		@include adaptiveValue("font-size", 18, 16);
 		line-height: 1.44;
+	}
+}
+
+//========================================================================================================================================================
+// .swiper-paginations
+.swiper-paginations {
+	display: flex;
+	justify-content: center;
+	padding-top: rem(25);
+	padding-bottom: rem(20);
+	gap: rem(10);
+
+	@media (min-width: $mobile) {
+		display: none;
+	}
+
+	.swiper-pagination-bullet {
+		width: rem(9);
+		height: rem(9);
+		background-color: #b4ccc9;
+		opacity: 1;
+
+		&-active {
+			outline: rem(1) solid #8a858b;
+			outline-offset: rem(4);
+		}
 	}
 }

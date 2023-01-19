@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Lazy, EffectFade, Autoplay } from 'swiper';
+import Swiper, { Navigation, Lazy, EffectFade, Autoplay, Pagination, Thumbs } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -31,10 +31,45 @@ function initSliders()
 	if (document.querySelector('.swiper'))
 	{ // Указываем класс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем класс нужного слайдера
+		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			//effect: 'fade',
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 2,
+			spaceBetween: 16,
+			parallax: true,
+			//autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			// breakpoints: {
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 	},
+			// 	1330: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 16,
+			// 	},
+			// },
+			on: {
+				init: function (swiper)
+				{
+
+				}
+			}
+		});
+		new Swiper('.training__slider', { // Указываем класс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Thumbs],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -44,7 +79,7 @@ function initSliders()
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -58,12 +93,15 @@ function initSliders()
 			*/
 
 			// Пагінація
-			/*
+
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.swiper-paginations',
 				clickable: true,
 			},
-			*/
+			thumbs: {
+				swiper: thumbsSwiper
+			},
+
 
 			// Скроллбар
 			/*
@@ -105,6 +143,8 @@ function initSliders()
 
 			}
 		});
+
+
 	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
