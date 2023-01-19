@@ -213,8 +213,20 @@
 .training {
 	// .training__container
 	&__container {
+		position: relative;
 		@media (max-width: $mobile) {
 			padding-bottom: rem(80);
+		}
+
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: 50% 1fr;
+			@include adaptiveValue("column-gap", 75, 20);
+			@include adaptiveValue("padding-bottom", 190, 100);
+		}
+
+		@media (min-width: $tablet) {
+			grid-template-columns: 60% 1fr;
 		}
 	}
 	// .training__title
@@ -225,6 +237,7 @@
 
 		@media (min-width: $mobile) {
 			@include adaptiveValue("margin-bottom", 100, 80);
+			grid-column: span 2;
 		}
 	}
 	// .training__swiper
@@ -242,13 +255,31 @@
 			left: 0;
 			padding-bottom: percent(359, 290);
 			width: 95%;
+			height: 90%;
 			z-index: -1;
+
+			@media (min-width: $tablet) {
+				border-radius: 5px rem(160);
+			}
+		}
+
+		@media (min-width: $mobile) {
+			overflow: hidden;
+			padding-top: rem(20);
+			margin-bottom: rem(40);
+			&::before {
+				transform: translate(5%, 1%);
+			}
 		}
 	}
 	// .training__slider
 	&__slider {
 		border-radius: 2% rem(120);
 		width: 95%;
+
+		@media (min-width: $tablet) {
+			border-radius: 5px rem(160);
+		}
 	}
 	// .training__wrapper
 	&__wrapper {
@@ -269,14 +300,34 @@
 		@media (max-width: $mobile) {
 			display: none;
 		}
+		@media (min-width: $mobile) {
+			overflow: hidden;
+			grid-column: 2/3;
+			grid-row: 3/4;
+			width: 85%;
+		}
 	}
 
 	// .training__slide-thumbs-ibg
 	&__slide-thumbs-ibg {
-		padding-bottom: percent(359, 270);
+		padding-bottom: 35%;
+
+		&:nth-child(odd) {
+			& img {
+				border-radius: 120px 120px 5px 5px;
+			}
+		}
+
+		& img {
+			border-radius: 120px 120px 120px 5px;
+		}
 	}
 	// .training__content
 	&__content {
+		@media (min-width: $mobile) {
+			grid-column: 1/2;
+			grid-row: 2/3;
+		}
 	}
 	// .training__subtitle
 	&__subtitle {

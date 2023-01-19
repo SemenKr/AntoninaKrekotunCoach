@@ -34,21 +34,21 @@ function initSliders()
 		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			modules: [Navigation, Pagination, Autoplay, Thumbs, Lazy],
 			//effect: 'fade',
 			observer: true,
 			watchOverflow: true,
 			observeParents: true,
-			slidesPerView: 2,
-			spaceBetween: 16,
+			slidesPerView: 3,
+			spaceBetween: 25,
 			parallax: true,
 			//autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
+			// loop: true,
+			// preloadImages: false,
+			// lazy: true,
 
 			// breakpoints: {
 			// 	992: {
@@ -69,7 +69,7 @@ function initSliders()
 		new Swiper('.training__slider', { // Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Thumbs],
+			modules: [Navigation, Pagination, Thumbs, Lazy, Autoplay, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -80,17 +80,17 @@ function initSliders()
 			//touchRatio: 0,
 			//simulateTouch: false,
 			loop: true,
-			//preloadImages: false,
-			//lazy: true,
+			preloadImages: false,
+			lazy: true,
 
-			/*
+
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
-				delay: 3000,
+				delay: 6000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 			// Пагінація
 
@@ -114,7 +114,7 @@ function initSliders()
 			// Кнопки "влево/вправо"
 			navigation: {
 				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				nextEl: '.slider-button-next',
 			},
 			/*
 			//Брейкпоинта
