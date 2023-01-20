@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230119234659">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230120164302">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,45 +92,49 @@
 			<section class="training">
 				<div class="training__container">
 					<h2 class="training__title title">Содержание тренировок</h2>
-					<div class="training__swiper">
-						<!-- Оболочка слайдера -->
-						<div class="training__slider swiper">
-							<!-- Двигающееся часть слайдера -->
+					<div class="training__swipers-wrapper">
+						<div class="training__swiper">
+							<!-- Оболочка слайдера -->
+							<div class="training__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="training__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
+									</div>
+								</div>
+
+
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-paginations"></div>
+						</div>
+
+						<div class="training__slider-thumbs swiper">
 							<div class="training__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<div class="training__slide-ibg swiper-slide">
-									<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt=""></picture>
+								<div class="training__slide-thumbs-ibg  swiper-slide">
+									<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt="coach"></picture>
 								</div>
-								<div class="training__slide-ibg swiper-slide">
-									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
 								</div>
-								<div class="training__slide-ibg swiper-slide">
-									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
 								</div>
-							</div>
-
-
-						</div>
-						<!-- Если нужна пагинация -->
-						<div class="swiper-paginations"></div>
-					</div>
-
-					<div class="training__slider-thumbs swiper">
-						<div class="training__wrapper swiper-wrapper">
-							<div class="training__slide-thumbs-ibg swiper-slide">
-								<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt="coach"></picture>
-							</div>
-							<div class="training__slide-thumbs-ibg swiper-slide">
-								<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
-							</div>
-							<div class="training__slide-thumbs-ibg swiper-slide">
-								<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
 							</div>
 						</div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="slider-button-next"></button>
 					</div>
-					<!-- Если нужна навигация (влево/вправо) -->
-					<button type="button" class="slider-button-next"></button>
-					<div data-showmore data-showmore-media="768" class="training__content">
+
+
+					<div data-showmore data-showmore-media="1300" class="training__content">
 						<h3 class="training__subtitle title title_sub">Осанка</h3>
 						<p class="training__description description">Истинная осанка&nbsp;&mdash; это бессознательное положение тела в&nbsp;пространстве. стоя, сидя или в&nbsp;движении. Она не&nbsp;должна постоянно корректироваться сознательно. как мы&nbsp;не&nbsp;думаем про дыхание, также мы&nbsp;не&nbsp;должны пытаться насильно держать спину ровной</p>
 						<h4 class="training__list-title title_list">Существует 4&nbsp;типа осанки:</h4>
@@ -151,6 +155,7 @@
 						</button>
 					</div>
 				</div>
+
 			</section>
 		</main>
 		<footer class="footer">
@@ -159,7 +164,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230119234659"></script>
+	<script src="js/app.min.js?_v=20230120164302"></script>
 </body>
 
 </html>

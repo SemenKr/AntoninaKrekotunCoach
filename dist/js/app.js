@@ -4217,14 +4217,21 @@
     function initSliders() {
         if (document.querySelector(".swiper")) {
             const thumbsSwiper = new core(".training__slider-thumbs", {
-                modules: [ Navigation, Pagination, Autoplay, Thumb, Lazy ],
+                modules: [ Navigation, Pagination, Autoplay, Thumb, Lazy, EffectFade ],
                 observer: true,
                 watchOverflow: true,
                 observeParents: true,
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 25,
-                parallax: true,
+                direction: "vertical",
                 speed: 800,
+                breakpoints: {
+                    1330: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                        direction: "horizontal"
+                    }
+                },
                 on: {
                     init: function(swiper) {}
                 }

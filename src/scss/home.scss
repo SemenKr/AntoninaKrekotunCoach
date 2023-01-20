@@ -220,13 +220,13 @@
 
 		@media (min-width: $mobile) {
 			display: grid;
-			grid-template-columns: 50% 1fr;
+			grid-template-columns: 1fr 60%;
 			@include adaptiveValue("column-gap", 75, 20);
 			@include adaptiveValue("padding-bottom", 190, 100);
 		}
 
-		@media (min-width: $tablet) {
-			grid-template-columns: 60% 1fr;
+		@media (min-width: em(1300)) {
+			grid-template-columns: 1fr 65%;
 		}
 	}
 	// .training__title
@@ -238,6 +238,16 @@
 		@media (min-width: $mobile) {
 			@include adaptiveValue("margin-bottom", 100, 80);
 			grid-column: span 2;
+		}
+	}
+
+	//training__swipers-wrapper
+	&__swipers-wrapper {
+		@media (min-width: $mobile) {
+			overflow: hidden;
+			display: flex;
+			gap: rem(10);
+			grid-column: 2/3;
 		}
 	}
 	// .training__swiper
@@ -264,12 +274,18 @@
 		}
 
 		@media (min-width: $mobile) {
-			overflow: hidden;
+			flex: 0 0 64%;
+			width: percent(100, 257);
 			padding-top: rem(20);
 			margin-bottom: rem(40);
+			height: min-content;
+			aspect-ratio: 257/341;
 			&::before {
 				transform: translate(5%, 1%);
 			}
+		}
+		@media (min-width: em(1300)) {
+			flex: 0 0 55%;
 		}
 	}
 	// .training__slider
@@ -281,9 +297,7 @@
 			border-radius: 5px rem(160);
 		}
 	}
-	// .training__wrapper
-	&__wrapper {
-	}
+
 	// .training__slide
 	&__slide-ibg {
 		padding-bottom: percent(359, 270);
@@ -302,16 +316,30 @@
 		}
 		@media (min-width: $mobile) {
 			overflow: hidden;
-			grid-column: 2/3;
-			grid-row: 3/4;
-			width: 85%;
+			flex: 0 0 35%;
+			width: percent(257, 100);
+			@include adaptiveValue("height", 300, 400);
+			margin-bottom: rem(50);
+			opacity: 0.6;
+		}
+
+		@media (min-width: rem(1330)) {
+			margin-top: 5%;
+			flex: 0 0 40%;
+			@include adaptiveValue("height", 180, 300);
+			transform: translate(6%, 0px);
+		}
+
+		&-active {
+			opacity: 1;
 		}
 	}
 
 	// .training__slide-thumbs-ibg
 	&__slide-thumbs-ibg {
-		padding-bottom: 35%;
-
+		@media (min-width: em(1330)) {
+			@include adaptiveValue("width", 224, 130);
+		}
 		&:nth-child(odd) {
 			& img {
 				border-radius: 120px 120px 5px 5px;
@@ -320,6 +348,7 @@
 
 		& img {
 			border-radius: 120px 120px 120px 5px;
+			@include adaptiveValue("width", 110, 170);
 		}
 	}
 	// .training__content
@@ -335,6 +364,7 @@
 			@include adaptiveValue("margin-bottom", 30, 20);
 		}
 	}
+
 	// .training__description
 	&__description {
 		@media (max-width: $mobile) {

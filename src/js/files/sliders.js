@@ -34,14 +34,15 @@ function initSliders()
 		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, Thumbs, Lazy],
-			//effect: 'fade',
+			modules: [Navigation, Pagination, Autoplay, Thumbs, Lazy, EffectFade],
+			// effect: 'fade',
 			observer: true,
 			watchOverflow: true,
 			observeParents: true,
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 25,
-			parallax: true,
+			// parallax: true,
+			direction: 'vertical',
 			//autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
@@ -50,15 +51,14 @@ function initSliders()
 			// preloadImages: false,
 			// lazy: true,
 
-			// breakpoints: {
-			// 	992: {
-			// 		slidesPerView: 3,
-			// 	},
-			// 	1330: {
-			// 		slidesPerView: 4,
-			// 		spaceBetween: 16,
-			// 	},
-			// },
+			breakpoints: {
+
+				1330: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+					direction: 'horizontal',
+				},
+			},
 			on: {
 				init: function (swiper)
 				{
