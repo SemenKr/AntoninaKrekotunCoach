@@ -236,8 +236,78 @@
 		}
 
 		@media (min-width: $mobile) {
+			grid-column: span 2;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			white-space: nowrap;
+
+			&::before {
+				content: "1";
+				font-family: $fontFamily;
+				font-size: rem(40);
+				font-weight: 400;
+				line-height: math.div(48, 40);
+				color: #d3d3d3;
+				border: rem(1) solid #d3d3d3;
+				border-radius: 50%;
+				width: rem(70);
+				height: rem(70);
+				flex: 0 0 rem(70);
+				display: grid;
+				place-content: center;
+				order: 3;
+				margin-top: rem(15);
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: rem(1);
+				background-color: #d3d3d3;
+				margin-right: rem(30);
+				margin-left: rem(30);
+				margin-top: rem(15);
+			}
+		}
+
+		@media (min-width: $mobile) {
 			@include adaptiveValue("margin-bottom", 100, 80);
 			grid-column: span 2;
+			align-items: center;
+			justify-content: space-between;
+			white-space: nowrap;
+
+			&::before {
+				content: "2";
+				font-family: $fontFamily;
+				font-size: rem(40);
+				font-weight: 400;
+				line-height: math.div(48, 40);
+				color: #d3d3d3;
+				border: rem(1) solid #d3d3d3;
+				border-radius: 50%;
+				width: rem(70);
+				height: rem(70);
+				flex: 0 0 rem(70);
+				display: grid;
+				place-content: center;
+				order: -2;
+				margin-top: rem(15);
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: rem(1);
+				background-color: #d3d3d3;
+				margin-right: rem(30);
+				margin-left: rem(30);
+				margin-top: rem(15);
+				order: -1;
+			}
 		}
 	}
 
