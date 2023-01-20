@@ -4248,10 +4248,6 @@
                 preloadImages: false,
                 lazy: true,
                 effect: "fade",
-                autoplay: {
-                    delay: 6e3,
-                    disableOnInteraction: false
-                },
                 pagination: {
                     el: ".swiper-paginations",
                     clickable: true

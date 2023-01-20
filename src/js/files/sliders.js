@@ -86,10 +86,10 @@ function initSliders()
 
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
-				delay: 6000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 6000,
+			// 	disableOnInteraction: false,
+			// },
 
 
 			// Пагінація
