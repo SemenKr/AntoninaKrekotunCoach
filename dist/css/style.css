@@ -310,8 +310,8 @@ h6 {
 .slider-button-next {
   padding: 0.3125rem;
   position: absolute;
-  bottom: 28%;
-  right: 4%;
+  bottom: 10%;
+  right: 10%;
   -webkit-transition: opacity 0.3s ease 0s;
   -o-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
@@ -1822,6 +1822,10 @@ button.swiper-pagination-bullet {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    position: relative;
   }
 
   .training__swiper {
