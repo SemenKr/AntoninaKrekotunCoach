@@ -94,6 +94,26 @@
 			line-height: 1.44;
 		}
 	}
+
+	&_decore {
+		color: #e6bdca;
+		margin-left: rem(15);
+		margin-right: rem(15);
+	}
+
+	&_more-l {
+		display: none;
+		@media (min-width: rem(1250)) {
+			display: block;
+		}
+	}
+
+	&_more-m {
+		display: none;
+		@media (min-width: $mobile) {
+			display: block;
+		}
+	}
 }
 
 .description {
