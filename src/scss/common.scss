@@ -189,3 +189,23 @@
 		bottom: 29%;
 	}
 }
+
+.feedback__swiper-pagination {
+	display: flex;
+	justify-content: center;
+	padding-top: rem(25);
+	padding-bottom: rem(20);
+	gap: rem(10);
+
+	.swiper-pagination-bullet {
+		width: rem(9);
+		height: rem(9);
+		background-color: #b4ccc9;
+		opacity: 1;
+
+		&-active {
+			outline: rem(1) solid #8a858b;
+			outline-offset: rem(4);
+		}
+	}
+}
