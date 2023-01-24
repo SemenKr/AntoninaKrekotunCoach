@@ -513,9 +513,6 @@
 			height: rem(3);
 		}
 	}
-	// .training__advice
-	&__advice {
-	}
 }
 
 //========================================================================================================================================================
@@ -617,9 +614,6 @@
 			@include adaptiveValue("min-width", 450, 125);
 		}
 	}
-	// .advantages__content
-	&__content {
-	}
 	// .advantages__list
 	&__list {
 		display: grid;
@@ -682,14 +676,12 @@
 			}
 		}
 	}
-	// .advantage__text
-	&__text {
-	}
 }
 //========================================================================================================================================================
 .feedback {
 	// .feedback__container
 	&__container {
+		@include adaptiveValue("padding-bottom", 80, 190);
 	}
 	// .feedback__title
 	&__title {

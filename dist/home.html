@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{
-"title":"Тоня Крекотун"
-})
+
+<head>
+	<title>Тоня Крекотун</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230124224628">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header" data-scroll="80" data-scroll-show>
+			<div class="header__container">
+				<div class="header__logo logo">
+					<a href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#svg-logo"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<button type="menu__button" class="menu__icon icon-menu" aria-controls="menu__body" aria-expanded="false"><span class="visually-hidden">Menu</span><span></span></button>
+					<nav class="menu__body" id="menu__body" data-state="closed">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link">О тренере</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Тренировки</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Преимущества OnLine</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section class="intro">
 				<div class="intro__container">
@@ -18,10 +48,10 @@
 					</div>
 					<div class="intro__image-ibg">
 						<picture>
-							<source srcset="@img/intro/intro-image@1x.webp 1x, @img/intro/intro-image@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
-							<source srcset="@img/intro/intro-image-tablet@1x.webp 1x, @img/intro/intro-image-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
-							<source srcset="@img/intro/intro-mobile@1x.webp 1x, @img/intro/intro-image-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
-							<img src="@img/intro/intro-image-mobile@1x.png" alt="Фотографии тренера">
+							<source srcset="img/intro/intro-image@1x.webp 1x, img/intro/intro-image@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="img/intro/intro-image-tablet@1x.webp 1x, img/intro/intro-image-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<source srcset="img/intro/intro-mobile@1x.webp 1x, img/intro/intro-image-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+							<img src="img/intro/intro-image-mobile@1x.png" alt="Фотографии тренера">
 						</picture>
 					</div>
 				</div>
@@ -32,10 +62,10 @@
 					<h2 class="about__title title">O тренере</h2>
 					<div class="about__image-ibg">
 						<picture>
-							<source srcset="@img/about/about@1x.webp 1x, @img/about/about@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
-							<source srcset="@img/about/about-tablet@1x.webp 1x, @img/about/about-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
-							<source srcset="@img/about/about-mobile@1x.webp 1x, @img/about/about-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
-							<img src="@img/about/about-mobile@1x.jpg" alt="Фотографии тренера">
+							<source srcset="img/about/about@1x.webp 1x, img/about/about@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="img/about/about-tablet@1x.webp 1x, img/about/about-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<source srcset="img/about/about-mobile@1x.webp 1x, img/about/about-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+							<img src="img/about/about-mobile@1x.jpg" alt="Фотографии тренера">
 						</picture>
 					</div>
 					<div class="about__content-wrapper">
@@ -73,19 +103,19 @@
 									<!-- Слайд -->
 									<div class="training__slide-ibg swiper-slide">
 										<a class="training__slide-button" href="https://www.youtube.com/watch?v=r_gqIQlwXU0"><span class="visually-hidden">Play</span></a>
-										<img src="@img/training/training_1@2x.jpg" alt="">
+										<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt=""></picture>
 									</div>
 									<div class="training__slide-ibg swiper-slide">
-										<img src="@img/training/training_2@2x.jpg" alt="">
+										<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
 									</div>
 									<div class="training__slide-ibg swiper-slide">
-										<img src="@img/training/training_3@2x.jpg" alt="">
+										<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
 									</div>
 									<div class="training__slide-ibg swiper-slide">
-										<img src="@img/training/training_2@2x.jpg" alt="">
+										<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
 									</div>
 									<div class="training__slide-ibg swiper-slide">
-										<img src="@img/training/training_3@2x.jpg" alt="">
+										<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
 									</div>
 								</div>
 							</div>
@@ -96,19 +126,19 @@
 						<div class="training__slider-thumbs swiper">
 							<div class="training__wrapper swiper-wrapper">
 								<div class="training__slide-thumbs-ibg  swiper-slide">
-									<img src="@img/training/training_1@2x.jpg" alt="coach">
+									<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt="coach"></picture>
 								</div>
 								<div class="training__slide-thumbs-ibg swiper-slide">
-									<img src="@img/training/training_2@2x.jpg" alt="coach">
+									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
 								</div>
 								<div class="training__slide-thumbs-ibg swiper-slide">
-									<img src="@img/training/training_3@2x.jpg" alt="coach">
+									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
 								</div>
 								<div class="training__slide-thumbs-ibg swiper-slide">
-									<img src="@img/training/training_2@2x.jpg" alt="coach">
+									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
 								</div>
 								<div class="training__slide-thumbs-ibg swiper-slide">
-									<img src="@img/training/training_3@2x.jpg" alt="coach">
+									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
 								</div>
 							</div>
 						</div>
@@ -146,8 +176,8 @@
 					<div class="advantages__grid-wrapper">
 						<div class="advantages__image-ibg">
 							<picture>
-								<source srcset="@img/advantages/advantages-image@1x.webp 1x, @img/advantages/advantages-image@2x.webp 2x" type="image/webp">
-								<img src="@img/advantages/advantages-image@1x.jpg" alt="Фотографии тренера">
+								<source srcset="img/advantages/advantages-image@1x.webp 1x, img/advantages/advantages-image@2x.webp 2x" type="image/webp">
+								<img src="img/advantages/advantages-image@1x.jpg" alt="Фотографии тренера">
 							</picture>
 						</div>
 						<div class="advantages__content">
@@ -201,7 +231,7 @@
 										<span class="client-card__age description">32 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/petrova-alena@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/petrova-alena@1x.webp" type="image/webp"><img src="img/feedback/petrova-alena@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
 									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
@@ -215,7 +245,7 @@
 										<span class="client-card__age description">24 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/ivanova@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/ivanova@1x.webp" type="image/webp"><img src="img/feedback/ivanova@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">С&nbsp;самой первой тренировки с&nbsp;Тоней я&nbsp;поменяла свой взгляд на&nbsp;спорт и&nbsp;на&nbsp;здоровье.</p>
 									<p class="client-card__description description">На&nbsp;каждом занятии узнаю что-то новое, хочется возвращаться вновь и&nbsp;вновь.</p>
@@ -229,7 +259,7 @@
 										<span class="client-card__age description">33 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/karavaeva@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/karavaeva@1x.webp" type="image/webp"><img src="img/feedback/karavaeva@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
 									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
@@ -243,7 +273,7 @@
 										<span class="client-card__age description">32 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/petrova-alena@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/petrova-alena@1x.webp" type="image/webp"><img src="img/feedback/petrova-alena@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
 									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
@@ -257,7 +287,7 @@
 										<span class="client-card__age description">24 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/ivanova@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/ivanova@1x.webp" type="image/webp"><img src="img/feedback/ivanova@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">С&nbsp;самой первой тренировки с&nbsp;Тоней я&nbsp;поменяла свой взгляд на&nbsp;спорт и&nbsp;на&nbsp;здоровье.</p>
 									<p class="client-card__description description">На&nbsp;каждом занятии узнаю что-то новое, хочется возвращаться вновь и&nbsp;вновь.</p>
@@ -271,7 +301,7 @@
 										<span class="client-card__age description">33 года</span>
 									</h4>
 									<div class="client-card__avatar-ibg">
-										<img src="@img/feedback/karavaeva@1x.jpg" alt="">
+										<picture><source srcset="img/feedback/karavaeva@1x.webp" type="image/webp"><img src="img/feedback/karavaeva@1x.jpg" alt=""></picture>
 									</div>
 									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
 									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
@@ -285,9 +315,13 @@
 				</div>
 			</section>
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20230124224628"></script>
 </body>
 
 </html>
