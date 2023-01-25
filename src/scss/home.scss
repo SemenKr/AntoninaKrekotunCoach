@@ -649,8 +649,12 @@
 }
 
 .advantage {
+	@media (max-width: em(600)) {
+		border-bottom: 1px solid #d3d3d3;
+	}
 	// .advantage__title
 	&__title {
+		padding-bottom: rem(10);
 		position: relative;
 		@media (max-width: rem(600)) {
 			&::after {
@@ -1141,5 +1145,102 @@
 		@media (max-width: em(600)) {
 			margin-left: rem(10);
 		}
+	}
+}
+//========================================================================================================================================================
+.questions {
+	// .questions__container
+	&__container {
+		@include adaptiveValue("padding-bottom", 60, 30);
+	}
+	// .questions__title
+	&__title {
+		display: flex;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 65, 35);
+		}
+
+		@media (min-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 100, 80);
+			grid-column: span 2;
+			align-items: center;
+			justify-content: space-between;
+			white-space: nowrap;
+
+			&::before {
+				content: "6";
+				font-family: $fontFamily;
+				font-size: rem(40);
+				font-weight: 400;
+				line-height: math.div(48, 40);
+				color: #d3d3d3;
+				border: rem(1) solid #d3d3d3;
+				border-radius: 50%;
+				width: rem(70);
+				height: rem(70);
+				flex: 0 0 rem(70);
+				display: grid;
+				place-content: center;
+				order: -2;
+				margin-top: rem(15);
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: rem(1);
+				background-color: #d3d3d3;
+				margin-right: rem(30);
+				margin-left: rem(30);
+				margin-top: rem(15);
+				order: -1;
+			}
+		}
+	}
+	// .questions__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	// .questions__item
+	&__item {
+		@include adaptiveValue("padding-bottom", 30, 15);
+		@include adaptiveValue("padding-top", 30, 15);
+		border-bottom: 1px solid #d3d3d3;
+
+		&:first-child {
+			border-top: 1px solid #d3d3d3;
+		}
+	}
+	// .questions__ask
+	&__ask {
+		position: relative;
+		padding-right: rem(25);
+		&::after {
+			content: "";
+			box-sizing: border-box;
+			height: rem(8);
+			width: rem(8);
+			position: absolute;
+			right: rem(5);
+			top: rem(6);
+			border-style: solid;
+			border-color: $mainColorText;
+			border-width: 0px 1px 1px 0px;
+			transform: rotate(45deg);
+			transition: border-width 150ms ease-in-out;
+			transition: transform 0.3s ease 0s;
+		}
+
+		&._spoller-active {
+			&::after {
+				transform: rotate(-138deg);
+			}
+		}
+	}
+	// .questions__description
+	&__description {
+		padding: rem(15) 0;
 	}
 }
