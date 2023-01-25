@@ -21,7 +21,7 @@
 							<source srcset="@img/intro/intro-image@1x.webp 1x, @img/intro/intro-image@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
 							<source srcset="@img/intro/intro-image-tablet@1x.webp 1x, @img/intro/intro-image-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
 							<source srcset="@img/intro/intro-mobile@1x.webp 1x, @img/intro/intro-image-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
-							<img src="@img/intro/intro-image-mobile@1x.png" alt="Фотографии тренера">
+							<img src="@img/intro/intro-mobile@1x.png" alt="Фотографии тренера">
 						</picture>
 					</div>
 				</div>
@@ -142,7 +142,7 @@
 			</section>
 			<section class="advantages">
 				<div class="advantages__container">
-					<h2 class="advantages__title title">Преимущества<span class="title title_decore title_more-m"> Online</span><span class="title title_more-l">тренировок</span></h2>
+					<h2 class="advantages__title title">Преимущества<span class="title title_decor title_more-m title_space"> Online</span><span class="title title_more-l">тренировок</span></h2>
 					<div class="advantages__grid-wrapper">
 						<div class="advantages__image-ibg">
 							<picture>
@@ -288,15 +288,34 @@
 				<div class="price__container">
 					<h2 class="price__title title">Стоимость</h2>
 					<div class="price__content">
-						<div class="price__image"></div>
+						<div class="price__image">
+							<div class="price__image-photo-ibg">
+								<picture>
+									<source srcset="@img/price/price@1x.webp 1x, @img/price/price@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+									<source srcset="@img/price/price-tablet@1x.webp 1x, @img/price/price-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+									<source srcset="@img/price/price-mobile@1x.webp 1x, @img/price/price-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+									<img src="@img/price/price-mobile@1x.jpg" alt="Фотографии тренера">
+								</picture>
+							</div>
+							<div class="price__image-card image-card">
+								<h4 class="image-card__title">Пробное<br> занятие</h4>
+								<ul class="image-card__list">
+									<li class="image-card__item">1 час занятий</li>
+									<li class="image-card__item">Обратная связь от тренера</li>
+									<li class="image-card__item">Нейрозарядка</li>
+									<li class="image-card__item">МФР</li>
+								</ul>
+								<span class="image-card__bonus">Бесплатно</span>
+							</div>
+						</div>
 						<div class="price__cards">
 							<ul class="price__list">
 								<li class="price__item price-card">
-									<h4 class="price-card__title">Light
+									<h4 class="price-card__title title title_price title_decor">Light
 										<span class="price-card__sessions">Абонемент<br>
 											на&nbsp;8&nbsp;занятий</span>
 									</h4>
-									<ul class="price-card__list">
+									<ul class="price-card__list description">
 										<li class="price-card__item">Вводная диагностика</li>
 										<li class="price-card__item">Занятие 2&nbsp;раза в&nbsp;неделю</li>
 										<li class="price-card__item">Постоянная обратная связь с&nbsp;тренером</li>
@@ -304,15 +323,17 @@
 										<li class="price-card__item">МФР</li>
 										<li class="price-card__item">Рекомендации по&nbsp;питанию</li>
 									</ul>
-									<span class="price-card__cost">8 000 руб.</span>
-									<a href="" class="price-card__button button">Записаться</a>
+									<div class="price-card__price-wrapper">
+										<span class="price-card__cost">8 000 руб.</span>
+										<a href="" class="price-card__button button">Записаться</a>
+									</div>
 								</li>
 								<li class="price__item price-card">
-									<h4 class="price-card__title">Hard
+									<h4 class="price-card__title title title_price title_decor-dark">Hard
 										<span class="price-card__sessions">Абонемент<br>
 											на&nbsp;16&nbsp;занятий</span>
 									</h4>
-									<ul class="price-card__list">
+									<ul class="price-card__list description">
 										<li class="price-card__item">Вводная диагностика</li>
 										<li class="price-card__item">Занятие 2&nbsp;раза в&nbsp;неделю</li>
 										<li class="price-card__item">Постоянная обратная связь с&nbsp;тренером</li>
@@ -320,8 +341,10 @@
 										<li class="price-card__item">МФР</li>
 										<li class="price-card__item">Рекомендации по&nbsp;питанию</li>
 									</ul>
-									<span class="price-card__cost">15 000 руб.</span>
-									<a href="" class="price-card__button button">Записаться</a>
+									<div class="price-card__price-wrapper">
+										<span class="price-card__cost">15 000 руб.</span>
+										<a href="" class="price-card__button button">Записаться</a>
+									</div>
 								</li>
 							</ul>
 						</div>

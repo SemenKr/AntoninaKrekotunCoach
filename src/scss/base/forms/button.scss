@@ -4,6 +4,7 @@
 .button {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	padding: rem(20) rem(56);
 	background-color: $accentColor;
 	width: rem(200);
