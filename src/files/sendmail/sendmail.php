@@ -22,9 +22,9 @@
 	*/
 
 	//От кого письмо
-	$mail->setFrom('samkrekotyn@gmail.com', 'Фрілансер по життю'); // Указать нужный E-mail
+	$mail->setFrom('from@gmail.com', 'Фрілансер по життю'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('tonya.smartfit@gmail.com'); // Указать нужный E-mail
+	$mail->addAddress('to@gmail.com'); // Указать нужный E-mail
 	//Тема письма
 	$mail->Subject = 'Вітання! Це "Фрілансер по життю"';
 

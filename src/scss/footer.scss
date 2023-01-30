@@ -1,3 +1,109 @@
 //====================================================================================================
+.footer {
+	color: #ffffff;
+	background-color: $accentColor;
+	@include adaptiveValue("padding-top", 69, 28);
+	@include adaptiveValue("padding-bottom", 69, 28);
+	// .footer__container
+	&__container {
+		display: grid;
+		@media (max-width: $mobile) {
+			justify-content: center;
+			row-gap: rem(36);
+		}
+	}
+	// .footer__logo
+	&__logo {
+	}
+	// .footer__contacts
+	&__contacts {
+	}
+	// .footer__social
+	&__social {
+	}
+}
+.logo-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	svg {
+		width: rem(136);
+		height: rem(26);
+		margin-bottom: rem(5);
+	}
+
+	p {
+		font-weight: 300;
+		line-height: 1.67;
+
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 16, 12);
+		}
+		@media (min-width: $mobile) {
+			@include adaptiveValue("font-size", 20, 16);
+		}
+	}
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// .contacts__title
+	&__title {
+		font-weight: 800;
+		margin-bottom: rem(8);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 22, 18);
+		}
+		@media (min-width: $mobile) {
+			font-size: rem(22);
+		}
+	}
+
+	a {
+		font-weight: 300;
+		line-height: 1.67;
+
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 16, 12);
+		}
+		@media (min-width: $mobile) {
+			@include adaptiveValue("font-size", 20, 16);
+		}
+	}
+}
+.social {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// .social__title
+	&__title {
+		font-weight: 800;
+		margin-bottom: rem(8);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 22, 18);
+		}
+		@media (min-width: $mobile) {
+			font-size: rem(22);
+		}
+	}
+	// .social__list
+	&__list {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: rem(10);
+	}
+	// .social__item
+	&__item {
+	}
+	// .social__link
+	&__link {
+		svg {
+			width: rem(30);
+			height: rem(30);
+		}
+	}
+}
 
 //====================================================================================================

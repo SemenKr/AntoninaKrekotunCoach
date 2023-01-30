@@ -166,7 +166,7 @@
 									<h3 class="advantage__title title title_list" data-spoller>Экономия времени</h3>
 									<p class="advantage__text">ТеВы&nbsp;не&nbsp;будете стоять
 										в&nbsp;пробках и&nbsp;тратить время
-										на&nbsp;поход в&nbsp;тренажерный залксе</p>
+										на&nbsp;поход в&nbsp;тренажерный зал</p>
 								</li>
 								<li class="advantages__item advantage">
 									<h3 class="advantage__title title title_list" data-spoller>Гибкий график занятий</h3>
@@ -174,7 +174,7 @@
 								</li>
 								<li class="advantages__item advantage">
 									<h3 class="advantage__title title title_list" data-spoller>Постоянная обратная связь</h3>
-									<p class="advantage__text">У&nbsp;Вас есть возможность быть на&nbsp;связе с&nbsp;тренером
+									<p class="advantage__text">У&nbsp;Вас есть возможность быть на&nbsp;связи с&nbsp;тренером
 										и&nbsp;задавать вопросы</p>
 								</li>
 								<li class="advantages__item advantage">
@@ -382,7 +382,30 @@
 					</ul>
 				</div>
 			</section>
-
+			<section class="order">
+				<div class="order__container">
+					<h2 class="order__title title">Запишись
+						на&nbsp;занятие</h2>
+					<div class="order__image-ibg">
+						<picture>
+							<source srcset="@img/order/order@1x.webp 1x, @img/order/order@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="@img/order/order-tablet@1x.webp 1x, @img/order/order-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<img src="@img/order/order@1x.jpg" alt="Фотографии тренера">
+						</picture>
+					</div>
+					<form action="sendmail.php" method="post" class="order__form form">
+						<h4 class="form__title title title_form"><span class="title title_form title_decor-accent">Отправьте заявку</span> и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;самое ближайшее время</h4>
+						<input autocomplete="off" type="text" name="name" data-validate data-error="Ошибка" placeholder="Ваше имя" class="form__input" data-required>
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="form__input" data-required>
+						<input autocomplete="off" type="email" name="email" data-error="Ошибка" placeholder="Ваш e-mail" class="form__input" data-required>
+						<div class="form__button-wrapper">
+							<p class="form__caution">Нажимая на кнопку, вы соглашаетесь
+								с <a>политикой конфиденциальности</a></p>
+							<button class="form__button button" type="submit">Записаться</button>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
