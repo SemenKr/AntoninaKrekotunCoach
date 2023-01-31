@@ -57,8 +57,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
@@ -254,8 +255,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
@@ -291,8 +293,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: -2;
 				margin-top: rem(15);
 			}
@@ -433,8 +436,9 @@
 		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 202 202' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='101.083' cy='100.917' r='60.9501' fill='%23E6BDCA'/%3E%3Cmask id='path-2-inside-1_1994_100' fill='white'%3E%3Cpath d='M127.309 175.692C140.477 171.053 152.185 163.016 161.247 152.394C170.308 141.773 176.399 128.944 178.905 115.21C181.41 101.475 180.239 87.3218 175.512 74.1852C170.784 61.0485 162.668 49.3952 151.985 40.4065C141.302 31.4178 128.432 25.4131 114.681 23.0012C100.929 20.5893 86.7847 21.8558 73.6805 26.6725C60.5762 31.4891 48.9783 39.6846 40.0623 50.4283C31.1463 61.1719 25.2292 74.0818 22.9106 87.8494L23.4174 87.9347C25.7208 74.2565 31.5996 61.4304 40.4577 50.7564C49.3159 40.0825 60.8385 31.9402 73.8578 27.1548C86.877 22.3694 100.93 21.1111 114.592 23.5073C128.254 25.9036 141.04 31.8693 151.654 40.7997C162.268 49.7301 170.331 61.3078 175.028 74.3592C179.725 87.4106 180.888 101.472 178.399 115.117C175.91 128.763 169.858 141.508 160.856 152.061C151.853 162.614 140.221 170.599 127.138 175.207L127.309 175.692Z'/%3E%3C/mask%3E%3Cpath d='M127.309 175.692C140.477 171.053 152.185 163.016 161.247 152.394C170.308 141.773 176.399 128.944 178.905 115.21C181.41 101.475 180.239 87.3218 175.512 74.1852C170.784 61.0485 162.668 49.3952 151.985 40.4065C141.302 31.4178 128.432 25.4131 114.681 23.0012C100.929 20.5893 86.7847 21.8558 73.6805 26.6725C60.5762 31.4891 48.9783 39.6846 40.0623 50.4283C31.1463 61.1719 25.2292 74.0818 22.9106 87.8494L23.4174 87.9347C25.7208 74.2565 31.5996 61.4304 40.4577 50.7564C49.3159 40.0825 60.8385 31.9402 73.8578 27.1548C86.877 22.3694 100.93 21.1111 114.592 23.5073C128.254 25.9036 141.04 31.8693 151.654 40.7997C162.268 49.7301 170.331 61.3078 175.028 74.3592C179.725 87.4106 180.888 101.472 178.399 115.117C175.91 128.763 169.858 141.508 160.856 152.061C151.853 162.614 140.221 170.599 127.138 175.207L127.309 175.692Z' stroke='white' stroke-width='2' mask='url(%23path-2-inside-1_1994_100)'/%3E%3Cpath d='M113.666 98.4019C115.666 99.5566 115.666 102.443 113.666 103.598L97.166 113.124C95.166 114.279 92.666 112.836 92.666 110.526L92.666 91.4737C92.666 89.1643 95.166 87.7209 97.166 88.8756L113.666 98.4019Z' fill='white'/%3E%3C/svg%3E");
 		@include adaptiveValue("width", 202, 75);
 		@include adaptiveValue("height", 202, 75);
-		display: grid;
-		place-content: center;
+		display: flex;
+		justify-content: center;
+		align-content: center;
 		bottom: 4%;
 		left: 5%;
 		z-index: 2;
@@ -547,8 +551,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
@@ -712,8 +717,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
@@ -749,8 +755,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: -2;
 				margin-top: rem(15);
 			}
@@ -876,8 +883,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
@@ -1179,8 +1187,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: -2;
 				margin-top: rem(15);
 			}
@@ -1292,8 +1301,9 @@
 				width: rem(70);
 				height: rem(70);
 				flex: 0 0 rem(70);
-				display: grid;
-				place-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
 				order: 3;
 				margin-top: rem(15);
 			}
