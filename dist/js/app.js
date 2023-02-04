@@ -4786,7 +4786,7 @@
     function initSliders() {
         if (document.querySelector(".swiper")) {
             const thumbsSwiper = new core(".training__slider-thumbs", {
-                modules: [ Navigation, Pagination, Autoplay, Thumb, Lazy, EffectFade ],
+                modules: [ Navigation, Pagination, Autoplay, Thumb, EffectFade ],
                 observer: true,
                 watchOverflow: true,
                 observeParents: true,

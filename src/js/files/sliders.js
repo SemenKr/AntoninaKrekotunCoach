@@ -34,7 +34,7 @@ function initSliders()
 		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, Thumbs, Lazy, EffectFade],
+			modules: [Navigation, Pagination, Autoplay, Thumbs, EffectFade],
 			// effect: 'fade',
 			observer: true,
 			watchOverflow: true,
