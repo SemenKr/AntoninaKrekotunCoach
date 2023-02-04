@@ -1,65 +1,20 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-
-	require 'phpmailer/src/Exception.php';
-	require 'phpmailer/src/PHPMailer.php';
-	require 'phpmailer/src/SMTP.php';
-
-	$mail = new PHPMailer(true);
-	$mail->CharSet = 'UTF-8';
-	$mail->setLanguage('ru', 'phpmailer/language/');
-	$mail->IsHTML(true);
-
-	/*
-	$mail->isSMTP();                                            //Send using SMTP
-	$mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'user@example.com';                     //SMTP username
-	$mail->Password   = 'secret';                               //SMTP password
-	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-	$mail->Port       = 465;                 
-	*/
-
-	//От кого письмо
-	$mail->setFrom('from@gmail.com', 'Фрілансер по життю'); // Указать нужный E-mail
-	//Кому отправить
-	$mail->addAddress('to@gmail.com'); // Указать нужный E-mail
-	//Тема письма
-	$mail->Subject = 'Вітання! Це "Фрілансер по життю"';
-
-	//Тема письма
-	$body = '<h1>Встречайте супер письмо!</h1>';
-
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
-	
-	/*
-	//Прикрепить файл
-	if (!empty($_FILES['image']['tmp_name'])) {
-		//шлях завантаження файлу
-		$filePath = __DIR__ . "/files/sendmail/attachments/" . $_FILES['image']['name']; 
-		//грузимо файл
-		if (copy($_FILES['image']['tmp_name'], $filePath)){
-			$fileAttach = $filePath;
-			$body.='<p><strong>Фото у додатку</strong>';
-			$mail->addAttachment($fileAttach);
-		}
-	}
-	*/
-
-	$mail->Body = $body;
-
-	//Отправляем
-	if (!$mail->send()) {
-		$message = 'Ошибка';
-	} else {
-		$message = 'Данные отправлены!';
-	}
-
-	$response = ['message' => $message];
-
-	header('Content-type: application/json');
-	echo json_encode($response);
+if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля и не пустые ли они
+        $to = 'samkrekotyn@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $subject = 'Заявка на звонок'; //Заголовок сообщения
+        $message = '
+                <html>
+                    <head>
+                        <title>'.$subject.'</title>
+                    </head>
+                    <body>
+                        <p>Имя: '.$_POST['name'].'</p>
+                        <p>Телефон: '.$_POST['phone'].'</p> 
+                    </body>
+                </html>'; //Текст нащего сообщения можно использовать HTML теги
+        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
+        $headers .= "From: Отправитель <test@test.com>\r\n"; //Наименование и почта отправителя
+        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+}
+header('Location: ./spasibo.html'); // Перенаправление на страницу после отправки
 ?>
