@@ -67,7 +67,7 @@ body::after {
 	border: 1px solid $mainColorText;
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 	position: absolute;
 	transform: rotate(-135deg);
 	background-color: $mainColorBg;

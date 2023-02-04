@@ -6,12 +6,23 @@ import { flsModules } from "./modules.js";
 
 const menuToggle = document.querySelector(".icon-menu");
 const siteNavigation = document.querySelector(".menu__body");
+const linksNavigation = document.querySelectorAll(".menu__link");
+
 
 menuToggle.addEventListener("click", () =>
 {
 	const isOpened = menuToggle.getAttribute("aria-expanded") === "true";
 	if (isOpened ? closeMenu() : openMenu());
 });
+
+linksNavigation.forEach(link =>
+{
+	link.addEventListener("click", () =>
+	{
+		const isOpened = menuToggle.getAttribute("aria-expanded") === "true";
+		if (isOpened ? closeMenu() : openMenu());
+	});
+})
 
 function openMenu()
 {
