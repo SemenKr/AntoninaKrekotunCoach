@@ -393,11 +393,11 @@
 							<img src="@img/order/order@1x.jpg" alt="Фотографии тренера">
 						</picture>
 					</div>
-					<form data-popup-message="#form-message" action="files/sendmail/sendmail.php" method="post" class="order__form form">
+					<form action="#" method="post" id="form" class="order__form form">
 						<h4 class="form__title title title_form"><span class="title title_form title_decor-accent">Отправьте заявку</span> и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;самое ближайшее время</h4>
-						<input autocomplete="off" type="text" name="name" data-validate data-error="Ошибка" placeholder="Ваше имя" class="form__input" data-required>
-						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="form__input" data-required>
-						<input autocomplete="off" data-required="email" data-error="Введен не верный E-mail" type="email" name="email" placeholder="Ваш e-mail" class="form__input" data-required>
+						<input autocomplete="off" type="text" name="name" data-validate data-error="Ошибка" placeholder="Ваше имя" class="form__input _req">
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="form__input _req" data-required>
+						<input autocomplete="off" data-required="email" data-error="Введен не верный E-mail" type="email" name="email" placeholder="Ваш e-mail" class="form__input _email _req">
 						<div class="form__button-wrapper">
 							<p class="form__caution">Нажимая на кнопку, вы соглашаетесь
 								с <a>политикой конфиденциальности</a></p>

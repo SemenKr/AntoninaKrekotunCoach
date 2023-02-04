@@ -1380,6 +1380,10 @@
 		}
 	}
 
+	&__input ._error {
+		box-shadow: 0 0 15px red;
+	}
+
 	// .form__button-wrapper
 	&__button-wrapper {
 		display: flex;

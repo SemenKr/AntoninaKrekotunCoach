@@ -1381,6 +1381,11 @@ body::after {
   line-height: 1.3;
 }
 
+.form__input ._error {
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
+}
+
 .form__button-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

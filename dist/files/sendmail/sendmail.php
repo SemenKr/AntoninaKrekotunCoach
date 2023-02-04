@@ -1,20 +1,39 @@
 <?php
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля и не пустые ли они
-        $to = 'samkrekotyn@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Заявка на звонок'; //Заголовок сообщения
-        $message = '
-                <html>
-                    <head>
-                        <title>'.$subject.'</title>
-                    </head>
-                    <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p> 
-                    </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <test@test.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+
+$mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
+$mail->setLanguage('ru', 'phpmailer/language/');
+$mail->IsHTML(true);
+
+// от кого 
+$mail->setFrom('samkrekotyn@gmail.com', 'Sam');
+// кому 
+$mail->addAddress('samkrekotun@gmail.com', 'Sam');
+// тема
+$mail->Subject = 'test email';
+
+$hand = "Правая";
+if($_POST['hand'] == "left") {
+	$hand = "Левая"ж
 }
-header('Location: ./spasibo.html'); // Перенаправление на страницу после отправки
+
+$body = '<h1>Заголовок</h1>'
+
+$mail->Body = $body;
+
+if(!$mail->send()) {
+	$message = 'Ошибочка';
+} else {
+	$message = 'Данные ушли';
+}
+
+$response = ['message' => $message];
+
+header('Content-type: application/json');
+echo json_encode($response);
 ?>
