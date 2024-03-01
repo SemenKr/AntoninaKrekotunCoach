@@ -1,5 +1,5 @@
 /*
-Документація по роботі у шаблоні: 
+Документація по роботі у шаблоні:
 Документація слайдера: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
@@ -7,10 +7,10 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Lazy, EffectFade, Autoplay, Pagination, Thumbs } from 'swiper';
+import Swiper from 'swiper';
 /*
 Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Детальніше дивись https://swiperjs.com/
 */
@@ -20,16 +20,16 @@ EffectFade, Lazy, Manipulation
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
+import {Autoplay, EffectFade, Navigation, Pagination, Thumbs} from "swiper/modules";
+
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
 // Ініціалізація слайдерів
-function initSliders()
-{
+function initSliders() {
 	// Список слайдеров
 	// Check if the slider is on the page
-	if (document.querySelector('.swiper'))
-	{ // Указываем класс нужного слайдера
+	if (document.querySelector('.swiper')) { // Указываем класс нужного слайдера
 		// Создаем слайдер
 		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
 			// Подключаем модули слайдера
@@ -60,8 +60,7 @@ function initSliders()
 				},
 			},
 			on: {
-				init: function (swiper)
-				{
+				init: function (swiper) {
 
 				}
 			}
@@ -69,7 +68,7 @@ function initSliders()
 		new Swiper('.training__slider', { // Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Thumbs, Lazy, Autoplay, EffectFade],
+			modules: [Navigation, Pagination, Thumbs, Autoplay, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -214,13 +213,10 @@ function initSliders()
 	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll()
-{
+function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0)
-	{
-		for (let index = 0; index < sliderScrollItems.length; index++)
-		{
+	if (sliderScrollItems.length > 0) {
+		for (let index = 0; index < sliderScrollItems.length; index++) {
 			const sliderScrollItem = sliderScrollItems[index];
 			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
 			const sliderScroll = new Swiper(sliderScrollItem, {
@@ -245,8 +241,7 @@ function initSlidersScroll()
 	}
 }
 
-window.addEventListener("load", function (e)
-{
+window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();
 	// Запуск инициализации скролл на базе слайдера (по классу swiper_scroll)
