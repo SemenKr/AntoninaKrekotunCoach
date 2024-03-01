@@ -400,7 +400,7 @@
 						<input autocomplete="off" data-required="email" data-error="Введен не верный E-mail" type="email" name="email" placeholder="Ваш e-mail" class="form__input _email _req">
 						<div class="form__button-wrapper">
 							<p class="form__caution">Нажимая на кнопку, вы соглашаетесь
-								с <a>политикой конфиденциальности</a></p>
+								с <a data-popup="#form-privacy">политикой конфиденциальности</a></p>
 							<button class="form__button button" type="submit">Записаться</button>
 						</div>
 					</form>
@@ -410,6 +410,7 @@
 		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
+	@@include('html/_popup-form-privacy.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 
