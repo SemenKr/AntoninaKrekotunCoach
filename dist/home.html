@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Тоня Крекотун</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240301164145">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll="80" data-scroll-show>
+			<div class="header__container">
+				<div class="header__logo logo">
+					<a href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#svg-logo"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<button type="menu__button" class="menu__icon icon-menu" aria-controls="menu__body" aria-expanded="false"><span class="visually-hidden">Menu</span><span></span></button>
+					<nav class="menu__body" id="menu__body" data-state="closed">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" data-goto=".about" class="menu__link">О тренере</a></li>
+							<li class="menu__item"><a href="#" data-goto=".training" class="menu__link">Тренировки</a></li>
+							<li class="menu__item"><a href="#" data-goto=".advantages" class="menu__link">Преимущества OnLine</a></li>
+							<li class="menu__item"><a href="#" data-goto=".price" class="menu__link">Стоимость</a></li>
+							<li class="menu__item"><a href="#" data-goto=".feedback" class="menu__link">Отзывы</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="intro">
+				<div class="intro__container">
+					<div class="intro__content">
+						<h1 class="intro__title">Умный фитнес</h1>
+						<p class="intro__tagline">C&nbsp;любовью<br> к&nbsp;своему телу</p>
+						<p class="intro__description">Онлайн тренировки c&nbsp;личным тренером&nbsp;&mdash; это<br> простой путь к&nbsp;здоровому и&nbsp;красивому<br> телу своей мечты</p>
+						<a href="#" data-popup="#popup" class="intro__button button button_sing-up">Записаться</a>
+					</div>
+					<div class="intro__image-ibg">
+						<picture>
+							<source srcset="img/intro/intro-image@1x.webp 1x, img/intro/intro-image@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="img/intro/intro-image-tablet@1x.webp 1x, img/intro/intro-image-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<source srcset="img/intro/intro-mobile@1x.webp 1x, img/intro/intro-image-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+							<img src="img/intro/intro-mobile@1x.png" alt="Фотографии тренера">
+						</picture>
+					</div>
+				</div>
+				<div class="marquee"></div>
+			</section>
+			<section class="about" id="about">
+				<div class="about__container">
+					<h2 class="about__title title">O тренере</h2>
+					<div class="about__image-ibg">
+						<picture>
+							<source srcset="img/about/about@1x.webp 1x, img/about/about@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="img/about/about-tablet@1x.webp 1x, img/about/about-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<source srcset="img/about/about-mobile@1x.webp 1x, img/about/about-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+							<img src="img/about/about-mobile@1x.jpg" alt="Фотографии тренера">
+						</picture>
+					</div>
+					<div class="about__content-wrapper">
+						<p class="about__description description">Привет! Меня зовут Тоня. Я&nbsp;тренер
+							по&nbsp;умному фитнесу и&nbsp;специалист по движению.
+							После вторых родов меня активно затянул мир фитнеса и&nbsp;3д&nbsp;движений.
+							Я&nbsp;прошла обучение на&nbsp;фитнес тренера
+							и&nbsp;стала читать специализированную литературу.
+						</p>
+						<h3 class="about__list-title title title_list">Со&nbsp;мной&nbsp;ты:</h3>
+						<ul class="about__list description">
+							<li class="about__item">лучше узнаешь свое тело и&nbsp;его возможности</li>
+							<li class="about__item">вернёшь телу подвижность и&nbsp;лёгкость движения</li>
+							<li class="about__item">улучшишь осанку</li>
+							<li class="about__item">избавишься от&nbsp;отеков и&nbsp;дискомфорта</li>
+							<li class="about__item">избавишься от&nbsp;проблемных зон</li>
+							<li class="about__item">укрепишь мышцы кора и&nbsp;ягодиц</li>
+						</ul>
+					</div>
+					<p class="about__advice description">Не&nbsp;гонись за&nbsp;чужим идеальным телом, а&nbsp;создавай своё!
+						В&nbsp;моей работе на&nbsp;первом месте здоровье клиентов без диет
+						и&nbsp;изнуряющих тренировок
+					</p>
+				</div>
+			</section>
+			<section class="training">
+				<div class="training__container">
+					<h2 class="training__title title">Содержание тренировок</h2>
+					<div class="training__swipers-wrapper">
+						<div class="training__swiper">
+							<!-- Оболочка слайдера -->
+							<div class="training__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="training__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="training__slide-ibg swiper-slide">
+										<a class="training__slide-button" href="https://www.youtube.com/watch?v=r_gqIQlwXU0"><span class="visually-hidden">Play</span></a>
+										<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt=""></picture>
+									</div>
+									<div class="training__slide-ibg swiper-slide">
+										<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt=""></picture>
+									</div>
+								</div>
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-paginations"></div>
+						</div>
+
+						<div class="training__slider-thumbs swiper">
+							<div class="training__wrapper swiper-wrapper">
+								<div class="training__slide-thumbs-ibg  swiper-slide">
+									<picture><source srcset="img/training/training_1@2x.webp" type="image/webp"><img src="img/training/training_1@2x.jpg" alt="coach"></picture>
+								</div>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
+								</div>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
+								</div>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_2@2x.webp" type="image/webp"><img src="img/training/training_2@2x.jpg" alt="coach"></picture>
+								</div>
+								<div class="training__slide-thumbs-ibg swiper-slide">
+									<picture><source srcset="img/training/training_3@2x.webp" type="image/webp"><img src="img/training/training_3@2x.jpg" alt="coach"></picture>
+								</div>
+							</div>
+						</div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="slider-button-next"></button>
+					</div>
+
+
+					<div data-showmore data-showmore-media="1300" class="training__content">
+						<h3 class="training__subtitle title title_sub">Осанка</h3>
+						<p class="training__description description">Истинная осанка&nbsp;&mdash; это бессознательное положение тела в&nbsp;пространстве. стоя, сидя или в&nbsp;движении. Она не&nbsp;должна постоянно корректироваться сознательно. как мы&nbsp;не&nbsp;думаем про дыхание, также мы&nbsp;не&nbsp;должны пытаться насильно держать спину ровной</p>
+						<h4 class="training__list-title title title_list">Существует 4&nbsp;типа осанки:</h4>
+						<div data-showmore-content="140" class="training__list-wrapper">
+							<ul class="training__list description">
+								<li class="training__item">нормальная осанка (естественные изгибы)</li>
+								<li class="training__item">гиперкифоз (круглая спина)</li>
+								<li class="training__item">плоская спина (уплощены естественные изгибы)</li>
+								<li class="training__item">перепрогиб в грудо-поясничном переходе (вогнуто-плоска спина)</li>
+								<li class="training__item">кругло-вогнутая (передний наклон таза+компенсаторный кифоз)</li>
+							</ul>
+							<p class="training__advice description">При каждом типе осанки свои нюансы работы, но&nbsp;есть вещи, которые полезны всем. Это работа со&nbsp;зрением, вестибулярным аппаратом и&nbsp;мозжечком. Именно мозжечок отвечает за&nbsp;осанку.
+							</p>
+						</div>
+						<button hidden data-showmore-button="1000" type="button" class="training__more">
+							<span>Раскрыть полностью</span>
+							<span>Скрыть</span>
+						</button>
+					</div>
+				</div>
+
+			</section>
+			<section class="advantages">
+				<div class="advantages__container">
+					<h2 class="advantages__title title">Преимущества<span class="title title_decor title_more-m title_space"> Online</span><span class="title title_more-l">тренировок</span></h2>
+					<div class="advantages__grid-wrapper">
+						<div class="advantages__image-ibg">
+							<picture>
+								<source srcset="img/advantages/advantages-image@1x.webp 1x, img/advantages/advantages-image@2x.webp 2x" type="image/webp">
+								<img src="img/advantages/advantages-image@1x.jpg" alt="Фотографии тренера">
+							</picture>
+						</div>
+						<div class="advantages__content">
+							<ul class="advantages__list" data-spollers="600">
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Цены, которые вас
+										порадуют</h3>
+									<p class="advantage__text">Индивидуальные тренировки дома стоят дешевле, чем абонемент в&nbsp;фитнес-центр</p>
+								</li>
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Индивидуальный подход</h3>
+									<p class="advantage__text">Во&nbsp;время тренировки
+										100&nbsp;% внимание тренера направлено на&nbsp;Вас</p>
+								</li>
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Экономия времени</h3>
+									<p class="advantage__text">ТеВы&nbsp;не&nbsp;будете стоять
+										в&nbsp;пробках и&nbsp;тратить время
+										на&nbsp;поход в&nbsp;тренажерный зал</p>
+								</li>
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Гибкий график занятий</h3>
+									<p class="advantage__text">Есть возможность менять время занятий под ваш запрос</p>
+								</li>
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Постоянная обратная связь</h3>
+									<p class="advantage__text">У&nbsp;Вас есть возможность быть на&nbsp;связи с&nbsp;тренером
+										и&nbsp;задавать вопросы</p>
+								</li>
+								<li class="advantages__item advantage">
+									<h3 class="advantage__title title title_list" data-spoller>Минимальная потребность в&nbsp;инвентаре</h3>
+									<p class="advantage__text">Можно использовать подручные средства,
+										если нет нужного инвентаря</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__container">
+					<h2 class="feedback__title title">Отзывы</h2>
+					<!-- Оболочка слайдера -->
+					<div class="feedback__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="feedback__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Петрова Алена,
+										<span class="client-card__age description">32 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/petrova-alena@1x.webp" type="image/webp"><img src="img/feedback/petrova-alena@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
+									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
+									<p class="client-card__description description">Умный фитнес&nbsp;&mdash; это лучшее вложение в&nbsp;свое тело.</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Иванова Светлана,
+										<span class="client-card__age description">24 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/ivanova@1x.webp" type="image/webp"><img src="img/feedback/ivanova@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">С&nbsp;самой первой тренировки с&nbsp;Тоней я&nbsp;поменяла свой взгляд на&nbsp;спорт и&nbsp;на&nbsp;здоровье.</p>
+									<p class="client-card__description description">На&nbsp;каждом занятии узнаю что-то новое, хочется возвращаться вновь и&nbsp;вновь.</p>
+									<p class="client-card__description description">Безумно благодарна тренеру за&nbsp;новое отношение к&nbsp;спорту. Тренировки дают полноценный результат.</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Караваева Надя,
+										<span class="client-card__age description">33 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/karavaeva@1x.webp" type="image/webp"><img src="img/feedback/karavaeva@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
+									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
+									<p class="client-card__description description">Умный фитнес&nbsp;&mdash; это лучшее вложение в&nbsp;свое тело.</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Петрова Алена,
+										<span class="client-card__age description">32 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/petrova-alena@1x.webp" type="image/webp"><img src="img/feedback/petrova-alena@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
+									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
+									<p class="client-card__description description">Умный фитнес&nbsp;&mdash; это лучшее вложение в&nbsp;свое тело.</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Иванова Светлана,
+										<span class="client-card__age description">24 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/ivanova@1x.webp" type="image/webp"><img src="img/feedback/ivanova@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">С&nbsp;самой первой тренировки с&nbsp;Тоней я&nbsp;поменяла свой взгляд на&nbsp;спорт и&nbsp;на&nbsp;здоровье.</p>
+									<p class="client-card__description description">На&nbsp;каждом занятии узнаю что-то новое, хочется возвращаться вновь и&nbsp;вновь.</p>
+									<p class="client-card__description description">Безумно благодарна тренеру за&nbsp;новое отношение к&nbsp;спорту. Тренировки дают полноценный результат.</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="feedback__slide swiper-slide">
+								<div class="client-card">
+									<h4 class="client-card__name title title_list">Караваева Надя,
+										<span class="client-card__age description">33 года</span>
+									</h4>
+									<div class="client-card__avatar-ibg">
+										<picture><source srcset="img/feedback/karavaeva@1x.webp" type="image/webp"><img src="img/feedback/karavaeva@1x.jpg" alt=""></picture>
+									</div>
+									<p class="client-card__description description">Я&nbsp;занимаюсь у&nbsp;Тони уже 6&nbsp;месяцев. Очень нравятся занятия. Тоня всегда на&nbsp;связи и&nbsp;отвечает на&nbsp;все вопросы.</p>
+									<p class="client-card__description description">Каждый урок продуман и&nbsp;нацелен на&nbsp;результат. И&nbsp;этот результат я&nbsp;уже вижу. Ушли бока, появилась мышечная масса.</p>
+									<p class="client-card__description description">Умный фитнес&nbsp;&mdash; это лучшее вложение в&nbsp;свое тело.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Если нужна пагинация -->
+						<div class="feedback__swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="price">
+				<div class="price__container">
+					<h2 class="price__title title">Стоимость</h2>
+					<div class="price__content">
+						<div class="price__image">
+							<div class="price__image-photo-ibg">
+								<picture>
+									<source srcset="img/price/price@1x.webp 1x, img/price/price@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+									<source srcset="img/price/price-tablet@1x.webp 1x, img/price/price-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+									<source srcset="img/price/price-mobile@1x.webp 1x, img/price/price-mobile@2x.webp 2x" type="image/webp" media="(max-width:1023.98px)">
+									<img src="img/price/price-mobile@1x.jpg" alt="Фотографии тренера">
+								</picture>
+							</div>
+							<div class="price__image-card image-card">
+								<h4 class="image-card__title">Пробное<br> занятие</h4>
+								<ul class="image-card__list">
+									<li class="image-card__item">1 час занятий</li>
+									<li class="image-card__item">Обратная связь от тренера</li>
+									<li class="image-card__item">Нейрозарядка</li>
+									<li class="image-card__item">МФР</li>
+								</ul>
+								<span class="image-card__bonus">Бесплатно</span>
+							</div>
+						</div>
+						<div class="price__cards">
+							<ul class="price__list">
+								<li class="price__item price-card">
+									<h4 class="price-card__title title title_price title_decor">Light
+										<span class="price-card__sessions">Абонемент<br>
+											на&nbsp;8&nbsp;занятий</span>
+									</h4>
+									<ul class="price-card__list description">
+										<li class="price-card__item">Вводная диагностика</li>
+										<li class="price-card__item">Занятие 2&nbsp;раза в&nbsp;неделю</li>
+										<li class="price-card__item">Постоянная обратная связь с&nbsp;тренером</li>
+										<li class="price-card__item">Нейрозарядки</li>
+										<li class="price-card__item">МФР</li>
+										<li class="price-card__item">Рекомендации по&nbsp;питанию</li>
+									</ul>
+									<div class="price-card__price-wrapper">
+										<span class="price-card__cost">8 000 руб.</span>
+										<a data-popup="#popup" class="price-card__button button">Записаться</a>
+									</div>
+								</li>
+								<li class="price__item price-card">
+									<h4 class="price-card__title title title_price title_decor-dark">Hard
+										<span class="price-card__sessions">Абонемент<br>
+											на&nbsp;16&nbsp;занятий</span>
+									</h4>
+									<ul class="price-card__list description">
+										<li class="price-card__item">Вводная диагностика</li>
+										<li class="price-card__item">Занятие 2&nbsp;раза в&nbsp;неделю</li>
+										<li class="price-card__item">Постоянная обратная связь с&nbsp;тренером</li>
+										<li class="price-card__item">Нейрозарядки</li>
+										<li class="price-card__item">МФР</li>
+										<li class="price-card__item">Рекомендации по&nbsp;питанию</li>
+									</ul>
+									<div class="price-card__price-wrapper">
+										<span class="price-card__cost">15 000 руб.</span>
+										<a data-popup="#popup" class="price-card__button button">Записаться</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="questions">
+				<div class="questions__container">
+					<h2 class="questions__title title">Ответы на&nbsp;<span class="title title_more-l">часто задаваемые</span>вопросы</h2>
+					<ul data-spollers class="questions__list">
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">Если я&nbsp;купила абонемент и&nbsp;заболела, то&nbsp;можно&nbsp;ли перенести тренировки?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">Какое время лучше всего для тренировки?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">За&nbsp;сколько до&nbsp;тренировки можно есть?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">Какое оборудование необходимо для тренировок?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">Если я&nbsp;купила абонемент и&nbsp;заболела, то&nbsp;можно&nbsp;ли перенести тренировки?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+						<li class="questions__item">
+							<h4 data-spoller class="questions__ask titlt title_list">Если я&nbsp;купила абонемент и&nbsp;заболела, то&nbsp;можно&nbsp;ли перенести тренировки?</h4>
+							<p class="questions__description description">Наши тренировки&nbsp;&mdash; это всегда о&nbsp;здоровье. Поэтому на&nbsp;период действия абонемента можно переносить тренировки. Об&nbsp;отмене тренировки необходимо сообщить заранее тренеру.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="order">
+				<div class="order__container">
+					<h2 class="order__title title">Запишись
+						на&nbsp;занятие</h2>
+					<div class="order__image-ibg">
+						<picture>
+							<source srcset="img/order/order@1x.webp 1x, img/order/order@2x.webp 2x" type="image/webp" media="(min-width:1023.98px)">
+							<source srcset="img/order/order-tablet@1x.webp 1x, img/order/order-tablet@2x.webp 2x" type="image/webp" media="(min-width:767.98px)">
+							<img src="img/order/order@1x.jpg" alt="Фотографии тренера">
+						</picture>
+					</div>
+					<form action="#" method="post" id="form" class="order__form form">
+						<h4 class="form__title title title_form"><span class="title title_form title_decor-accent">Отправьте заявку</span> и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;самое ближайшее время</h4>
+						<input autocomplete="off" type="text" name="name" data-validate data-error="Ошибка" placeholder="Ваше имя" class="form__input _req">
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="form__input _req" data-required>
+						<input autocomplete="off" data-required="email" data-error="Введен не верный E-mail" type="email" name="email" placeholder="Ваш e-mail" class="form__input _email _req">
+						<div class="form__button-wrapper">
+							<p class="form__caution">Нажимая на кнопку, вы соглашаетесь
+								с <a>политикой конфиденциальности</a></p>
+							<button class="form__button button" type="submit">Записаться</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__logo logo-footer">
+					<a href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#svg-logo-footer"></use>
+						</svg>
+					</a>
+					<p>Умный фитнес с&nbsp;любовью к&nbsp;телу!</p>
+				</div>
+				<div class="footer__contacts contacts">
+					<h3 class="contacts__title">Контакты</h3>
+					<a href="tel:+79215841850">+7 (921) 584-18-50</a>
+				</div>
+				<div class="footer__social social">
+					<h4 class="social__title">Связаться</h4>
+					<ul class="social__list">
+						<li class="social__item">
+							<a href="https://vk.com/id14346" class="social__link">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#svg-social-vk"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="https://t.me/Antonina_Kre" class="social__link">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#svg-social-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="https://vk.com/id14346" class="social__link">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#svg-social-inst"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span class="visually-hidden">Закрыть</span></button>
+
+				<form action="sendmail.php" method="post" class="order__form form">
+					<h4 class="form__title title title_form"><span class="title title_form title_decor-accent">Отправьте заявку</span> и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;самое ближайшее время</h4>
+					<input autocomplete="off" type="text" name="name" data-validate data-error="Ошибка" placeholder="Ваше имя" class="form__input" data-required>
+					<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="form__input" data-required>
+					<input autocomplete="off" type="email" name="email" data-error="Ошибка" placeholder="Ваш e-mail" class="form__input" data-required>
+					<div class="form__button-wrapper">
+						<button class="form__button button" type="submit">Записаться</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240301164145"></script>
+</body>
+
+</html>
