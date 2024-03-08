@@ -6,7 +6,7 @@
 
 <h2> Demo </h2>
 
-<a href="https://semenkr.github.io/AntoninaKrekotunCoach/dist/home.html">Click Here</a>
+<a href="[https://semenkr.github.io/AntoninaKrekotunCoach/dist/home.html](https://antonina-krekotun.netlify.app/)">Click Here</a>
 
 
 <h2> Features </h2>
