@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240301203908">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240308122519">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -430,7 +430,7 @@
 						<input autocomplete="off" data-required="email" data-error="Введен не верный E-mail" type="email" name="email" placeholder="Ваш e-mail" class="form__input _email _req">
 						<div class="form__button-wrapper">
 							<p class="form__caution">Нажимая на кнопку, вы соглашаетесь
-								с <a>политикой конфиденциальности</a></p>
+								с <a data-popup="#form-privacy">политикой конфиденциальности</a></p>
 							<button class="form__button button" type="submit">Записаться</button>
 						</div>
 					</form>
@@ -498,7 +498,31 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240301203908"></script>
+	<div id="form-privacy" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span class="visually-hidden">Закрыть</span></button>
+				<h2 class="title title_form">Политика конфиденциальности</h2>
+				<p class="popup__text description">
+					Политика конфиденциальности описывает, как мы собираем, используем и защищаем информацию, которую вы предоставляете при заполнении формы с вашим именем, телефонным номером и адресом электронной почты на нашем веб-сайте.
+				</p>
+				<h2 class="title title_form">Сбор и использование информации</h2>
+				<p class="popup__text description">
+					Мы собираем только ту информацию, которая явно предоставляется вами при заполнении формы на нашем веб-сайте. Это включает в себя ваше имя, номер телефона и адрес электронной почты. Мы используем эту информацию исключительно для целей, связанных с вашим запросом или вопросом, который вы оставили через форму. Мы не используем предоставленную информацию для отправки нежелательных сообщений или передачи ее третьим лицам без вашего согласия.
+				</p>
+				<h2 class="title title_form"> Защита информации
+				</h2>
+				<p class="popup__text description">Мы прилагаем все разумные меры для защиты предоставленной вами информации от несанкционированного доступа, использования или раскрытия. Мы стремимся обеспечить безопасность вашей личной информации, используя современные технологии и процедуры безопасности.</p>
+				<h2 class="title title_form">Куки и аналитика
+				</h2>
+				<p class="popup__text description">Мы можем использовать куки и аналитические инструменты на нашем веб-сайте для анализа трафика, улучшения работы сайта и адаптации контента под ваши предпочтения. Эти данные обычно анонимны и не содержат личную информацию.</p>
+				<h2 class="title title_form">Изменения в политике конфиденциальности
+				</h2>
+				<p class="popup__text description"> Мы оставляем за собой право вносить изменения в нашу политику конфиденциальности по мере необходимости. Любые изменения будут опубликованы на этой странице.</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240308122519"></script>
 </body>
 
 </html>

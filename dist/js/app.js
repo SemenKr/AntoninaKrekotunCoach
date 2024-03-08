@@ -4648,7 +4648,6 @@
                 speed: 800,
                 loop: true,
                 preloadImages: false,
-                lazy: true,
                 effect: "fade",
                 pagination: {
                     el: ".swiper-paginations",
@@ -4673,7 +4672,6 @@
                 speed: 800,
                 loop: true,
                 preloadImages: false,
-                lazy: true,
                 pagination: {
                     el: ".feedback__swiper-pagination",
                     clickable: true
