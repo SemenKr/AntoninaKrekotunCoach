@@ -62,17 +62,16 @@ HTML · CSS · SCSS · БЭМ
 
 ## Скриншоты
 
-### Desktop (1440px)
-![Desktop](docs/screenshots/desktop.jpg)
-
-### Tablet (1024px)
-![Tablet](docs/screenshots/tablet.jpg)
-
-### Mobile (390px)
-![Mobile](docs/screenshots/mobile.jpg)
-
-### Форма (секция #order)
-![Form](docs/screenshots/form.jpg)
+<table>
+  <tr>
+    <td><img src="docs/screenshots/desktop.jpg" width="360" alt="Desktop (1440px)"></td>
+    <td><img src="docs/screenshots/tablet.jpg" width="360" alt="Tablet (1024px)"></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/mobile.jpg" width="360" alt="Mobile (390px)"></td>
+    <td><img src="docs/screenshots/form.jpg" width="360" alt="Форма (секция #order)"></td>
+  </tr>
+</table>
 
 ---
 
