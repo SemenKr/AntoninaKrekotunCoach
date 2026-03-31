@@ -5,6 +5,5 @@ Source/
 version.json
 **/*.zip
 **/*.rar
-package-lock.json
 phpmailer/
 .idea/
