@@ -7,14 +7,29 @@
 // Стилі Swiper (базові)
 import "../../scss/base/swiper.scss";
 
+let swiperLoader;
+let trainingInitialized = false;
+let feedbackInitialized = false;
+
+function loadSwiper() {
+	if (!swiperLoader) {
+		swiperLoader = Promise.all([
+			import('swiper'),
+			import('swiper/modules'),
+		]).then(([{ default: Swiper }, modules]) => ({ Swiper, modules }));
+	}
+	return swiperLoader;
+}
+
 function initTrainingSliders(Swiper, modules) {
 	const { Navigation, Pagination, Thumbs, EffectFade } = modules;
 	const mainSlider = document.querySelector('.training__slider');
 	const thumbsSlider = document.querySelector('.training__slider-thumbs');
 
-	if (!mainSlider || !thumbsSlider) {
+	if (trainingInitialized || !mainSlider || !thumbsSlider) {
 		return;
 	}
+	trainingInitialized = true;
 
 	const thumbsSwiper = new Swiper(thumbsSlider, {
 		observer: true,
@@ -61,9 +76,10 @@ function initTrainingSliders(Swiper, modules) {
 function initFeedbackSlider(Swiper, modules) {
 	const { Pagination } = modules;
 	const feedbackSlider = document.querySelector('.feedback__slider');
-	if (!feedbackSlider) {
+	if (feedbackInitialized || !feedbackSlider) {
 		return;
 	}
+	feedbackInitialized = true;
 
 	new Swiper(feedbackSlider, {
 		modules: [Pagination],
@@ -91,22 +107,53 @@ function initFeedbackSlider(Swiper, modules) {
 		},
 	});
 }
-async function initSliders() {
-	const hasSliders = document.querySelector('.training__slider, .feedback__slider');
-	if (!hasSliders) {
-		return;
-	}
+function observeSlider(target, onIntersect) {
+	const observer = new IntersectionObserver((entries, currentObserver) => {
+		if (entries.some((entry) => entry.isIntersecting)) {
+			currentObserver.disconnect();
+			onIntersect();
+		}
+	}, {
+		rootMargin: '200px 0px',
+	});
 
-	const [{ default: Swiper }, modules] = await Promise.all([
-		import('swiper'),
-		import('swiper/modules'),
-	]);
+	observer.observe(target);
+}
 
+async function initSlidersNow() {
+	const { Swiper, modules } = await loadSwiper();
 	initTrainingSliders(Swiper, modules);
 	initFeedbackSlider(Swiper, modules);
 }
 
+function initSlidersOnDemand() {
+	const trainingSlider = document.querySelector('.training__slider');
+	const feedbackSlider = document.querySelector('.feedback__slider');
+	if (!trainingSlider && !feedbackSlider) {
+		return;
+	}
+
+	if (!('IntersectionObserver' in window)) {
+		void initSlidersNow();
+		return;
+	}
+
+	if (trainingSlider) {
+		observeSlider(trainingSlider, async () => {
+			const { Swiper, modules } = await loadSwiper();
+			initTrainingSliders(Swiper, modules);
+		});
+	}
+
+	if (feedbackSlider) {
+		observeSlider(feedbackSlider, async () => {
+			const { Swiper, modules } = await loadSwiper();
+			initFeedbackSlider(Swiper, modules);
+		});
+	}
+}
+
 window.addEventListener("load", () => {
 	// Запуск инициализации слайдеров
-	void initSliders();
+	initSlidersOnDemand();
 });
