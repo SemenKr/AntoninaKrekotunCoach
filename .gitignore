@@ -7,3 +7,4 @@ version.json
 **/*.rar
 package-lock.json
 phpmailer/
+.idea/
