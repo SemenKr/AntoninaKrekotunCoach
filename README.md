@@ -64,6 +64,13 @@ HTML · CSS · SCSS · БЭМ
 
 <table>
   <tr>
+    <td><img src="docs/screenshots/lighthouse-mobile.jpg" width="360" alt="Lighthouse Mobile"></td>
+    <td><img src="docs/screenshots/lighthouse-desktop.jpg" width="360" alt="Lighthouse Desktop"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
     <td><img src="docs/screenshots/desktop.jpg" width="360" alt="Desktop (1440px)"></td>
     <td><img src="docs/screenshots/tablet.jpg" width="360" alt="Tablet (1024px)"></td>
   </tr>
@@ -75,18 +82,16 @@ HTML · CSS · SCSS · БЭМ
 
 ---
 
-## Lighthouse (Mobile)
+## Lighthouse
 
 Замер: 2026-03-31, локальная сборка `npm run build` (Lighthouse CLI).
 
-| Метрика | До | После |
-| --- | --- | --- |
-| Performance | 72 | 71 |
-| Accessibility | 95 | 95 |
-| Best Practices | 100 | 100 |
-| SEO | 100 | 100 |
+| Профиль | Performance | Accessibility | Best Practices | SEO |
+| --- | --- | --- | --- | --- |
+| Mobile | 81 | 100 | 100 | 100 |
+| Desktop | 99 | 100 | 100 | 100 |
 
-Отчеты: [before](docs/lighthouse/before-mobile.report.html), [after](docs/lighthouse/after-mobile.report.html)
+Отчеты: [before](docs/lighthouse/before-mobile.report.html), [after mobile](docs/lighthouse/after-mobile.report.html), [after desktop](docs/lighthouse/after-desktop.report.html)
 
 ---
 
