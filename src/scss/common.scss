@@ -9,6 +9,11 @@
 	width: 1px;
 }
 
+.defer-render {
+	content-visibility: auto;
+	contain-intrinsic-size: 1000px;
+}
+
 //========================================================================================================================================================
 .marquee {
 	background: center / contain repeat-x

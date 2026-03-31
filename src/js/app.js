@@ -34,12 +34,25 @@ flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
+const runAfterIdle = (callback) => {
+	if ("requestIdleCallback" in window) {
+		window.requestIdleCallback(callback, { timeout: 2000 });
+		return;
+	}
+	setTimeout(callback, 200);
+};
+
 /*
 Модуль "Спойлери"
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-flsFunctions.spollers();
+window.addEventListener("load", () => {
+	runAfterIdle(() => {
+		flsFunctions.spollers();
+		flsFunctions.showMore();
+	});
+});
 
 /*
 Модуль "Таби"
@@ -53,7 +66,6 @@ flsFunctions.spollers();
 Документація: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сніппет (HTML): showmore
 */
-flsFunctions.showMore();
 
 /*
 Модуль "Ефект хвиль"
