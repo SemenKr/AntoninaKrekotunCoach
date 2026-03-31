@@ -4,245 +4,109 @@
 Сніппет(HTML): swiper
 */
 
-// Підключаємо слайдер Swiper з node_modules
-// При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
-// Приклад: { Navigation, Autoplay }
-import Swiper from 'swiper';
-/*
-Основні модулі слайдера:
-Navigation, Pagination, Autoplay,
-EffectFade, Lazy, Manipulation
-Детальніше дивись https://swiperjs.com/
-*/
-
-// Стилі Swiper
-// Базові стилі
+// Стилі Swiper (базові)
 import "../../scss/base/swiper.scss";
-// Повний набір стилів з scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
-import {Autoplay, EffectFade, Navigation, Pagination, Thumbs} from "swiper/modules";
 
-// Повний набір стилів з node_modules
-// import 'swiper/css';
+function initTrainingSliders(Swiper, modules) {
+	const { Navigation, Pagination, Thumbs, EffectFade } = modules;
+	const mainSlider = document.querySelector('.training__slider');
+	const thumbsSlider = document.querySelector('.training__slider-thumbs');
 
-// Ініціалізація слайдерів
-function initSliders() {
-	// Список слайдеров
-	// Check if the slider is on the page
-	if (document.querySelector('.swiper')) { // Указываем класс нужного слайдера
-		// Создаем слайдер
-		const thumbsSwiper = new Swiper('.training__slider-thumbs', {
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, Thumbs, EffectFade],
-			// effect: 'fade',
-			observer: true,
-			watchOverflow: true,
-			observeParents: true,
-			slidesPerView: 2,
-			spaceBetween: 25,
-			// parallax: true,
-			direction: 'vertical',
-			//autoHeight: true,
-			speed: 800,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-			// preloadImages: false,
-			// lazy: true,
-
-			breakpoints: {
-
-				1330: {
-					slidesPerView: 2,
-					spaceBetween: 16,
-					direction: 'horizontal',
-				},
-			},
-			on: {
-				init: function (swiper) {
-
-				}
-			}
-		});
-		new Swiper('.training__slider', { // Указываем класс нужного слайдера
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation, Pagination, Thumbs, Autoplay, EffectFade],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			loop: true,
-			preloadImages: false,
-
-
-			// Эффекты
-			effect: 'fade',
-			// autoplay: {
-			// 	delay: 6000,
-			// 	disableOnInteraction: false,
-			// },
-
-
-			// Пагінація
-
-			pagination: {
-				el: '.swiper-paginations',
-				clickable: true,
-			},
-			thumbs: {
-				swiper: thumbsSwiper
-			},
-
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.slider-button-next',
-			},
-			/*
-			//Брейкпоинта
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// События
-			on: {
-
-			}
-		});
-		new Swiper('.feedback__slider', { // Указываем класс нужного слайдера
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Pagination, Lazy],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 20,
-			autoHeight: true,
-			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			loop: true,
-			preloadImages: false,
-			// lazy: true,
-
-
-			// Эффекты
-			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 6000,
-			// 	disableOnInteraction: false,
-			// },
-
-
-			// Пагінація
-
-			pagination: {
-				el: '.feedback__swiper-pagination',
-				clickable: true,
-			},
-
-
-
-			// Скроллбар
-
-			// scrollbar: {
-			// 	el: '.swiper-scrollbar',
-			// 	draggable: true,
-			// },
-
-
-			// Кнопки "влево/вправо"
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.slider-button-next',
-			// },
-
-			//Брейкпоинта
-			breakpoints: {
-				600: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				1024: {
-					slidesPerView: 3,
-					spaceBetween: 25,
-				},
-			},
-
-			// События
-			on: {
-
-			}
-		});
-
-
+	if (!mainSlider || !thumbsSlider) {
+		return;
 	}
-}
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
+
+	const thumbsSwiper = new Swiper(thumbsSlider, {
+		observer: true,
+		watchOverflow: true,
+		observeParents: true,
+		slidesPerView: 2,
+		spaceBetween: 25,
+		direction: 'vertical',
+		speed: 800,
+		breakpoints: {
+			1330: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+				direction: 'horizontal',
+			},
+		},
+	});
+
+	new Swiper(mainSlider, {
+		modules: [Navigation, Pagination, Thumbs, EffectFade],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 800,
+		loop: true,
+		preloadImages: false,
+		effect: 'fade',
+		pagination: {
+			el: '.swiper-paginations',
+			clickable: true,
+		},
+		thumbs: {
+			swiper: thumbsSwiper
+		},
+		navigation: {
+			prevEl: '.swiper-button-prev',
+			nextEl: '.slider-button-next',
+		},
+	});
 }
 
-window.addEventListener("load", function (e) {
+function initFeedbackSlider(Swiper, modules) {
+	const { Pagination } = modules;
+	const feedbackSlider = document.querySelector('.feedback__slider');
+	if (!feedbackSlider) {
+		return;
+	}
+
+	new Swiper(feedbackSlider, {
+		modules: [Pagination],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoHeight: true,
+		speed: 800,
+		loop: true,
+		preloadImages: false,
+		pagination: {
+			el: '.feedback__swiper-pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 25,
+			},
+		},
+	});
+}
+async function initSliders() {
+	const hasSliders = document.querySelector('.training__slider, .feedback__slider');
+	if (!hasSliders) {
+		return;
+	}
+
+	const [{ default: Swiper }, modules] = await Promise.all([
+		import('swiper'),
+		import('swiper/modules'),
+	]);
+
+	initTrainingSliders(Swiper, modules);
+	initFeedbackSlider(Swiper, modules);
+}
+
+window.addEventListener("load", () => {
 	// Запуск инициализации слайдеров
-	initSliders();
-	// Запуск инициализации скролл на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
+	void initSliders();
 });

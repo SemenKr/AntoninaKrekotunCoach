@@ -45,7 +45,7 @@ const config = {
 	output: {
 		path: `${paths.build}`,
 		filename: 'js/app.min.js',
-		publicPath: '/'
+		publicPath: '/js/'
 	},
 	devServer: {
 		historyApiFallback: true,

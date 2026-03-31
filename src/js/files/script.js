@@ -1,30 +1,36 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { formValidate } from './forms/forms.js';
-import { isMobile } from "./functions.js";
-// Підключення списку активних модулів
-import { flsModules } from "./modules.js";
 
 
 const menuToggle = document.querySelector(".icon-menu");
 const siteNavigation = document.querySelector(".menu__body");
 const linksNavigation = document.querySelectorAll(".menu__link");
 
-
-
-menuToggle.addEventListener("click", () =>
+if (menuToggle && siteNavigation)
 {
-	const isOpened = menuToggle.getAttribute("aria-expanded") === "true";
-	if (isOpened ? closeMenu() : openMenu());
-});
-
-linksNavigation.forEach(link =>
-{
-	link.addEventListener("click", () =>
+	menuToggle.addEventListener("click", () =>
 	{
 		const isOpened = menuToggle.getAttribute("aria-expanded") === "true";
-		if (isOpened ? closeMenu() : openMenu());
+		if (isOpened)
+		{
+			closeMenu();
+		} else
+		{
+			openMenu();
+		}
 	});
-})
+
+	linksNavigation.forEach(link =>
+	{
+		link.addEventListener("click", () =>
+		{
+			const isOpened = menuToggle.getAttribute("aria-expanded") === "true";
+			if (isOpened)
+			{
+				closeMenu();
+			}
+		});
+	});
+}
 
 function openMenu()
 {
@@ -45,6 +51,75 @@ function closeMenu()
 		{ once: true }
 	);
 }
+
+function syncSpollerAria(spollerTitle, index)
+{
+	const content = spollerTitle.nextElementSibling;
+	const isExpanded = spollerTitle.classList.contains("_spoller-active");
+
+	if (!spollerTitle.hasAttribute("role"))
+	{
+		spollerTitle.setAttribute("role", "button");
+	}
+	if (!spollerTitle.hasAttribute("tabindex"))
+	{
+		spollerTitle.setAttribute("tabindex", "0");
+	}
+	spollerTitle.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+	if (content)
+	{
+		if (!content.id)
+		{
+			content.id = `spoller-content-${index}`;
+		}
+		spollerTitle.setAttribute("aria-controls", content.id);
+	}
+}
+
+function initSpollerA11y()
+{
+	const spollerTitles = document.querySelectorAll("[data-spoller]");
+	spollerTitles.forEach((title, index) =>
+	{
+		syncSpollerAria(title, index);
+	});
+}
+
+document.addEventListener("click", (event) =>
+{
+	const spollerTitle = event.target.closest("[data-spoller]");
+	if (!spollerTitle)
+	{
+		return;
+	}
+	requestAnimationFrame(() =>
+	{
+		const index = Array.from(document.querySelectorAll("[data-spoller]")).indexOf(spollerTitle);
+		syncSpollerAria(spollerTitle, index >= 0 ? index : 0);
+	});
+});
+
+document.addEventListener("keydown", (event) =>
+{
+	const spollerTitle = event.target.closest("[data-spoller]");
+	if (!spollerTitle)
+	{
+		return;
+	}
+	if (event.key === "Enter" || event.key === " ")
+	{
+		event.preventDefault();
+		spollerTitle.click();
+	}
+});
+
+window.addEventListener("resize", () =>
+{
+	initSpollerA11y();
+});
+
+initSpollerA11y();
 
 // document.addEventListener('DOMContentLoaded', function ()
 // {
