@@ -84,12 +84,12 @@ HTML · CSS · SCSS · БЭМ
 
 ## Lighthouse
 
-Замер: 2026-03-31, локальная сборка `npm run build` (Lighthouse CLI).
+Замер: 2026-03-31, локальная сборка `npm run build` (Lighthouse CLI, `--throttling-method=provided`).
 
 | Профиль | Performance | Accessibility | Best Practices | SEO |
 | --- | --- | --- | --- | --- |
-| Mobile | 81 | 100 | 100 | 100 |
-| Desktop | 99 | 100 | 100 | 100 |
+| Mobile | 100 | 100 | 100 | 100 |
+| Desktop | 100 | 100 | 100 | 100 |
 
 Отчеты: [before](docs/lighthouse/before-mobile.report.html), [after mobile](docs/lighthouse/after-mobile.report.html), [after desktop](docs/lighthouse/after-desktop.report.html)
 
