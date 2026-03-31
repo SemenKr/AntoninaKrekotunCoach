@@ -1,30 +1,51 @@
+# Fitness Coach Landing Page
 
-<h1>Educational project Smart Fitness</h1>
+🚀 Адаптивный лендинг для персонального тренера с упором на чистую вёрстку, производительность и кроссбраузерность
 
-<p>Personal trainer</p>
+👉 Демо: https://antonina-krekotun.netlify.app  
+👉 Код: https://github.com/SemenKr/AntoninaKrekotunCoach  
 
+---
 
-<h2> Demo </h2>
+## ⚡ Ключевые особенности
 
-<a href="https://antonina-krekotun.netlify.app">Click Here</a>
+- Адаптивная вёрстка (mobile-first)  
+- Кроссбраузерная совместимость  
+- Семантическая HTML-разметка  
+- Использование методологии БЭМ  
+- Оптимизация изображений и SVG  
+- Pixel-perfect вёрстка по макету  
 
+---
 
-<h2> Features </h2>
+## 📈 Что реализовано
 
-- adaptive
-- BEM
-- mobile first
-- cross browser css
-- svg sprite
+- Построение адаптивного интерфейса под разные устройства  
+- Организация CSS-архитектуры с использованием БЭМ  
+- Оптимизация загрузки и отображения ресурсов  
+- Работа с SVG-спрайтами  
+- Обеспечение корректного отображения в разных браузерах  
 
+---
 
-<h2> 🚀 About Me </h2>
-<p>I'm a front-end developer...</p>
+## 🛠 Стек
 
+HTML · CSS · SCSS · БЭМ  
 
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/SemenKr)
+---
 
-<h2> Authors </h2>
+## 📸 Скриншоты
 
-- [@SemenKr](https://github.com/SemenKr)
+### Desktop
+![Desktop](docs/screenshots/desktop.png)
+
+### Mobile
+![Mobile](docs/screenshots/mobile.png)
+
+---
+
+## ⚙️ Запуск
+
+```bash
+npm install
+npm start
