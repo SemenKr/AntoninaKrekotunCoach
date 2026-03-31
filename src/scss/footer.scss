@@ -84,7 +84,7 @@
 	align-items: center;
 	// .contacts__title
 	&__title {
-		font-weight: 800;
+		font-weight: 700;
 		margin-bottom: rem(8);
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 22, 18);
@@ -122,7 +122,7 @@
 	align-items: center;
 	// .social__title
 	&__title {
-		font-weight: 800;
+		font-weight: 700;
 		margin-bottom: rem(12);
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 22, 18);
